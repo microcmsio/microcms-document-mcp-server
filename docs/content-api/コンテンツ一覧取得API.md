@@ -3,7 +3,7 @@ contentId: get-list-contents
 directory: content-api
 ---
 
-# GET /api/v1/{endpoint}
+# コンテンツ一覧取得API
 
 リスト形式のAPIにおいてはコンテンツ一覧が取得でき、オブジェクト形式のAPIにおいては単一コンテンツの取得ができます。  
   
@@ -19,7 +19,7 @@ X-MICROCMS-API-KEY
 GET APIリクエストの際に必要な認証キーです。  
 デフォルト権限もしくは個別権限で「GET」を有効にして、リクエストヘッダーに含めて送信してください。
 
-X-MICROCMS-API-KEYが判別できると、第三者による不正なコンテンツの操作が可能となります。お取り扱いには十分ご注意ください。詳細は「[APIキー（APIの認証と権限管理）](https://document.microcms.io/content-api/x-microcms-api-key)」をご覧ください。
+X-MICROCMS-API-KEYが判別できると、第三者による不正なコンテンツの操作が可能となります。お取り扱いには十分ご注意ください。詳細は「[APIキー（APIの認証と権限管理）](https://document.microcms.io/content-api/x-microcms-api-key)」をご覧ください！
 
 クエリパラメータ
 ========
