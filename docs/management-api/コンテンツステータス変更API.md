@@ -16,7 +16,7 @@ X-MICROCMS-API-KEY
 PATCH APIリクエストの際に必要な認証キーです。  
 マネジメントAPIのデフォルト権限で「コンテンツの公開状態を変更」を有効にして、リクエストヘッダーに含めて送信してください。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/4ab2795fa97e4d05861f15768159afe7/CleanShot%202024-03-22%20at%2014.40.50%402x.png)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/7cf1a9852e8842e597f36d8a7479673d/CleanShot%202025-08-21%20at%2011.43.50.png)
 
 X-MICROCMS-API-KEYが判別できると、第三者による不正なコンテンツの操作が可能となります。お取り扱いには十分ご注意ください。詳細は「[APIキー（APIの認証と権限管理）](https://document.microcms.io/content-api/x-microcms-api-key)」をご覧ください。
 
