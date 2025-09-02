@@ -22,6 +22,7 @@ APIに関して詳しく知りたい方は、imgixの[公式リファレンス](
 *   PNG
 *   GIF
 *   WebP
+*   HEIC/HEIF
 
 その他の利用可能な形式については、以下の`Supported as input format`をご参照ください。
 
