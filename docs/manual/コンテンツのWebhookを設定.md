@@ -8,7 +8,7 @@ directory: manual
 コンテンツの変更時に外部システムとの連携を行うための機能として、Webhook機能を用意しています。  
 設定は各APIの「API設定」→「Webhook」で行うことができます。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/5f05c25e6c8e4232962da9113680369c/CleanShot%202022-04-27%20at%2013.55.54%402x.png)  
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/02171c5ed6ce4056a7576059a81daa2e/CleanShot%202025-08-21%20at%2010.56.27.png)  
   
 追加ボタンから、Webhookの種類を選び、設定を行ってください。  
 設定できるWebhookは、以下の9種類です。
@@ -340,7 +340,7 @@ dispatchイベント呼び出し時のリクエストボディには、`event_ty
 microCMSにはWebhookリクエストがmicroCMSからのものであることを検証するためのヘッダ値を付与できます。  
 付与にあたってはシークレット値を設定する必要があり、microCMSでは設定することを推奨いたします。  
   
-シークレット値が設定されている場合のみ、リクエストのヘッダに`X-MICROCMS-Signature: <COMPUTED_HASH>`が付与されます。  
+シークレット値が設定されている場合のみ、リクエストのヘッダに`x-microcms-signature: <COMPUTED_HASH>`が付与されます。  
 ※ペイロードはmicroCMSがシークレット値とリクエストボディからSHA-256を使用したハッシュベースのHMACで生成します。  
   
 シークレット値はカスタム通知の設定画面で変更できます。  
@@ -351,7 +351,7 @@ microCMSにはWebhookリクエストがmicroCMSからのものであることを
 
 以下2つの値を比較することで検証を行うことができ、リクエストがmicroCMSからのものであることを検証可能です。
 
-*   `X-MICROCMS-Signature`ヘッダで受け取った値
+*   `x-microcms-signature`ヘッダで受け取った値
 *   ペイロード（`request.body` ）と設定したシークレット値を元にした値
 
 一例としてNode.jsの場合、検証は以下のような実装で行うことができます。
@@ -362,7 +362,7 @@ microCMSにはWebhookリクエストがmicroCMSからのものであることを
       .createHmac('sha256', <設定したシークレット>)
       .update(request.body)
       .digest('hex');
-    const signature = request.headers['X-MICROCMS-Signature'];
+    const signature = request.headers['x-microcms-signature'];
     if (!crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expectedSignature))) {
       throw new Error('Invalid signature.');
     }
@@ -373,7 +373,7 @@ microCMSにはWebhookリクエストがmicroCMSからのものであることを
 ### ヘッダ
 
 リクエストヘッダには `Content-Type: application/json` が含まれます。  
-また、上述のシークレットを設定済みの場合は `X-MICROCMS-Signature: <SIGNATUR_VALUE>` が含まれます。  
+また、上述のシークレットを設定済みの場合は `x-microcms-signature: <SIGNATUR_VALUE>` が含まれます。  
   
 任意のリクエストヘッダーを追加することも可能です。**カスタムリクエストヘッダー** の「+」ボタンをクリックして追加してください。  
   
@@ -381,9 +381,6 @@ microCMSにはWebhookリクエストがmicroCMSからのものであることを
   
 ![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/44861c7e4fb64964b9191bc9d2bd69fa/CleanShot%202025-02-07%20at%2010.27.49.png)
 
-リクエストヘッダ「X-MICROCMS-Signature」は、Webhookの種類によっては、「x-microcms-signature（全て小文字）」の表記で送信される場合がございます。  
-本ヘッダの処理にあたっては、大文字・小文字を区別しない形での実装をお願い申し上げます。  
-  
 セキュリティの観点から、microCMSのドメイン（.microcms.io, .microcms-management.io）宛てにWebhookを設定することを制限しています。
 
 ### ボディ

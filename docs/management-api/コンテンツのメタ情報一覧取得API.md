@@ -22,7 +22,7 @@ X-MICROCMS-API-KEY
 マネジメントAPIのGET APIリクエストの際に必要な認証キーです。  
 マネジメントAPIのデフォルト権限で「コンテンツの取得 (一覧・詳細)」を有効にして、リクエストヘッダーに含めて送信してください。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/2013aca03b0a4467a4c55ed4706a3442/CleanShot%202024-03-22%20at%2014.42.45%402x.png)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/8ce6f316efd744b28bf26c440d6e4242/CleanShot%202025-08-21%20at%2011.42.11.png)
 
 X-MICROCMS-API-KEYが判別できると、第三者による不正なコンテンツの操作が可能となります。お取り扱いには十分ご注意ください。詳細は「[APIキー（APIの認証と権限管理）](https://document.microcms.io/content-api/x-microcms-api-key)」をご覧ください。
 

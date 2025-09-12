@@ -2,7 +2,7 @@
     "dxt_version": "0.1",
     "name": "microcms-document-mcp-server",
     "display_name": "microCMSドキュメントMCPサーバー",
-    "version": "0.1.9",
+    "version": "0.2.0",
     "description": "microCMSドキュメントのMCP Serverです。LLMがmicroCMSの最新情報にアクセスして回答できるようになります。",
     "icon": "assets/icon.png",
     "author": {
