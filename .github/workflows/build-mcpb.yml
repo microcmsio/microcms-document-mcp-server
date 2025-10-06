@@ -41,10 +41,10 @@ jobs:
         npx @anthropic-ai/mcpb@1.1.1 pack
 
         # Rename to include version
-        mv microcms-document-mcp-server.mcpb microcms-document-v${VERSION}.mcpb
+        mv microcms-document-mcp-server.mcpb microcms-document-mcp-server-v${VERSION}.mcpb
 
         # Also create a copy without version for consistency
-        cp microcms-document-v${VERSION}.mcpb microcms-document-mcp-server.mcpb
+        cp microcms-document-mcp-server-v${VERSION}.mcpb microcms-document-mcp-server.mcpb
 
     - name: Verify MCPB creation
       run: |
@@ -60,7 +60,7 @@ jobs:
         name: microcms-document-mcpb
         path: |
           microcms-document-mcp-server.mcpb
-          microcms-document-v*.mcpb
+          microcms-document-mcp-server-v*.mcpb
 
   release:
     needs: build
