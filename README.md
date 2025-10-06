@@ -26,13 +26,12 @@ Claude Codeに導入する場合、以下のコマンドを実行で設定を追
 claude mcp add microcms-document -- npx -y microcms-document-mcp-server
 ```
 
-### 方法3. Claude Desktopに設定する（DXT）
+### 方法3. MCP Bundle (MCPB) を使う
 
-Claude Desktopに導入する場合、dxtファイルを使って簡単にインストールできます。
+Claude Desktopに導入する場合、MCPBファイルを使って簡単にインストールできます。
 
-1. リリースページ から最新の microcms-document-mcp-server.dxt をダウンロード
-2. Claude Desktopを起動し、設定 > エクステンション を開く
-3. ダウンロードしたdxtファイルをClaude Desktopにドラッグ＆ドロップ
+1. [リリースページ](https://github.com/microcmsio/microcms-document-mcp-server/releases) から最新の `microcms-document-mcp-server.mcpb` をダウンロード
+2. ダウンロードしたmcpbファイルをダブルクリックで開く
 
 ### 方法4. その他のMCPクライアントに設定する
 
