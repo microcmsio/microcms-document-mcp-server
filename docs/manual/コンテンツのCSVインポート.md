@@ -24,14 +24,17 @@ directory: manual
   
 ３：サンプルのCSVファイル（input-format.csv）のリンクを押してダウンロードします  
   
+サンプルのCSVファイル（input-format.csv）には、登録されているフィールドの種類に応じてサンプル値が入力されています。インポートの際にご活用ください。  
+  
 ![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/239c5fd470ad41e0bbe7c6e0038daadd/csv-import-3.png)
 
-サンプルのCSVファイル（input-format.csv）では、登録されているフィールドの種類に応じてサンプル値が入力されていますので、インポートの際にご活用ください。
+*   ダウンロードできるサンプルのCSV ファイル（input-format.csv）は **UTF-8（BOMなし）でエンコード**されています。編集後も同じ形式で保存してください。
+*   お手元のアプリケーションでサンプルファイルを開くとき、CSVファイルが文字化けする場合があります。文字化けした際の対処法については、ヘルプ「[CSVインポート用のサンプルファイルを開くと文字化けします。対処法は？](https://help.microcms.io/ja/knowledge/csv-character-code)」をご確認ください。
 
   
 ４：登録したいコンテンツを記入し、CSVファイルを更新・保存します  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/834bcb75169f473fb7a62af2a2adf318/CleanShot%202025-06-17%20at%2017.56.10.png)  
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/7f1094861f4b4ac2b8cd8d22920b3526/CleanShot%202025-07-31%20at%2011.39.24.png)  
   
 ５：［ファイルを選択する］ボタンを押して、登録したいCSVファイルを読み込みます  
   
@@ -74,6 +77,7 @@ directory: manual
 
 *   [リスト形式](/manual/create-api#h75db320363)のAPIのみご利用いただけます。
 *   [非対応のフィールド](/manual/csv-import#hd2bed78bf9)がございます。
+*   CSVファイルは**文字コード UTF-8（BOMなし）** でインポートしてください。
 
 対応フィールドとその入力形式
 --------------
@@ -100,15 +104,13 @@ directory: manual
 
 リッチエディタ
 
-任意のテキスト (\*2)
+HTML文字列 (\*2)
 
-複数行のテキストを入力
-
-こんにちは
+<p>複数行のテキストを入力<br />こんにちは</p>
 
 旧リッチエディタ
 
-任意のテキスト (\*2)
+任意のテキスト (\*3)
 
 複数行のテキストを入力
 
@@ -116,13 +118,13 @@ directory: manual
 
 画像
 
-microCMSで配信されている画像のURL (\*3)
+microCMSで配信されている画像のURL (\*4)
 
 https://images.microcms-assets.io/assets/xxxx/yyyy/sample.png
 
 複数画像
 
-microCMSで配信されている画像のURLをカンマ区切りで指定 (\*4)
+microCMSで配信されている画像のURLをカンマ区切りで指定 (\*5)
 
 https://images.microcms-assets.io/assets/xxxx/yyyy/sample1.png,  
 https://images.microcms-assets.io/assets/xxxx/yyyy/sample2.png
@@ -169,24 +171,31 @@ category01,category02
 
 100
 
-ファイル (\*5)
+ファイル (\*6)
 
 microCMSで配信されているファイルのURL
 
 https://files.microcms-assets.io/assets/xxxx/yyyy/manual.pdf
 
+拡張フィールド
+
+JSON（登録可能なキーのみ）(\*7)
+
+{""id"":""xxxxxxxx"", ""title"":""xxxxxxxx"", ""description"":""xxxxxxxx"", ""imageUrl"":""https://images.microcms-assets.io/assets/xxxxxxxx/yyyyyyyy/sample1.png"", ""updatedAt"":""2025-01-01T00:00:00.000Z"",""data"":{""id"": ""123""}}
+
 *   (\*1) テキストエディタなどからCSVファイルを編集する場合、入力値に改行やカンマ(,)を利用する際は、ダブルクォーテーション(")で囲む必要があります。
-*   (\*2) プレーンテキストでの登録のみ可能です。文字の装飾を付与した状態での登録はできません。
-*   (\*3) [メディアのカスタムドメイン設定](/manual/custom-domain)を利用している場合、カスタムドメインのURLでも指定可能です。複数画像、ファイルも同様です。
-*   (\*4) 1つのフィールドに対して、最大100枚までインポートできます。
-*   (\*5) Hobbyプランは対象外です。
+*   (\*2) **リッチエディタにて対応しているHTMLの範囲のみ入稿することが可能**です。すべてのHTMLの記法に対応しているわけではないため、ご注意ください。利用できるフォーマットは[リッチエディタのWRITE API](https://document.microcms.io/manual/rich-editor-write-api)と同様です。
+*   (\*3) プレーンテキストでの登録のみ可能です。文字の装飾を付与した状態での登録はできません。
+*   (\*4) [メディアのカスタムドメイン設定](/manual/custom-domain)を利用している場合、カスタムドメインのURLでも指定可能です。複数画像、ファイルも同様です。
+*   (\*5) 1つのフィールドに対して、最大100枚までインポートできます。
+*   (\*6) Hobbyプランは対象外です。
+*   (\*7) CSVフォーマットの仕様上、`"`は`""`で登録する必要があります。
 
 非対応のフィールド
 ---------
 
 *   カスタム
 *   繰り返し
-*   拡張フィールド
 
 制約事項
 ----
