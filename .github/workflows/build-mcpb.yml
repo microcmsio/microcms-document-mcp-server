@@ -41,14 +41,14 @@ jobs:
         npx @anthropic-ai/mcpb@1.1.1 pack
 
         # Rename to include version
-        mv microcms-document.mcpb microcms-document-v${VERSION}.mcpb
+        mv microcms-document-mcp-server.mcpb microcms-document-v${VERSION}.mcpb
 
         # Also create a copy without version for consistency
-        cp microcms-document-v${VERSION}.mcpb microcms-document.mcpb
+        cp microcms-document-v${VERSION}.mcpb microcms-document-mcp-server.mcpb
 
     - name: Verify MCPB creation
       run: |
-        if [ ! -f microcms-document.mcpb ]; then
+        if [ ! -f microcms-document-mcp-server.mcpb ]; then
           echo "Error: MCPB file was failed to be created"
           exit 1
         fi
@@ -59,7 +59,7 @@ jobs:
       with:
         name: microcms-document-mcpb
         path: |
-          microcms-document.mcpb
+          microcms-document-mcp-server.mcpb
           microcms-document-v*.mcpb
 
   release:
@@ -80,7 +80,7 @@ jobs:
       uses: softprops/action-gh-release@6cbd405e2c4e67a21c47fa9e383d020e4e28b836 # v2.3.3
       with:
         files: |
-          microcms-document.mcpb
-          microcms-document-v*.mcpb
+          microcms-document-mcp-server.mcpb
+          microcms-document-mcp-server-v*.mcpb
         generate_release_notes: true
         fail_on_unmatched_files: true
