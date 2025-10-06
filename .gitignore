@@ -115,3 +115,5 @@ temp/
 downloads/
 download.js
 get_content_by_id.js
+
+dist/
