@@ -74,3 +74,4 @@ API
 管理画面で定義したAPIに関連するAPIです。
 
 https://document.microcms.io/management-api/get-api-info
+https://document.microcms.io/management-api/get-member
