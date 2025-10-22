@@ -125,14 +125,11 @@ microCMS MCP Serverを利用するには、クライアント側にNode.jsがイ
 2.  ダウンロードしたmcpbファイルをダブルクリックで開き、インストールします。
 3.  サービスIDとAPIキーを設定します。
 
-###   
-Claude Code
+### Claude Code
 
 以下のコマンドを実行します。
 
     claude mcp add microcms -- npx -y microcms-mcp-server
-
-  
 
 ### VSCode
 
@@ -153,7 +150,6 @@ Claude Code
       }
     }
 
-  
 
 ### Cursor
 
@@ -175,8 +171,6 @@ Claude Code
     }
 
 3\. 「Cursor Settings > Tools & MCP」で、microCMS MCP Serverを有効化します。
-
-###   
 
 制限事項
 ====
