@@ -61,16 +61,12 @@ Claude Desktop
 1.  [リリースページ](https://github.com/microcmsio/microcms-document-mcp-server/releases)から最新の `microcms-document-mcp-server.mcpb` をダウンロードします。
 2.  ダウンロードしたmcpbファイルをダブルクリックで開き、インストールします。
 
-  
-
 Claude Code
 -----------
 
 以下のコマンドを実行します。
 
     claude mcp add microcms-document -- npx -y microcms-document-mcp-server
-
-  
 
 VSCode
 ------
@@ -86,8 +82,6 @@ VSCode
         }
       }
     }
-
-  
 
 Cursor
 ------
