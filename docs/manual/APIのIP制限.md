@@ -24,6 +24,8 @@ APIのIP制限はBusinessプラン、Enterpriseプランでご利用いただけ
 *   環境（同じ環境内に所属するすべてのAPI）
 *   API
 
+IPv4 / IPv6のCIDR記法に対応しています。
+
 *   すべてのAPIにほぼ同一の制限をかける場合は、環境単位でIPアドレスを設定した上で、必要なAPIのみ上書きしてください。
 *   特定のAPIのみ制限をかける場合は、環境単位では設定を行わず、必要なAPIにIPアドレスを設定してください。
 
@@ -32,25 +34,27 @@ APIのIP制限はBusinessプラン、Enterpriseプランでご利用いただけ
 
 環境単位でのIP制限は、「サービス設定」→「APIのIP制限」より設定が可能です。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/38b0809fba3443a7ac2e25ba3f3c789e/CleanShot%202024-04-17%20at%205%E2%80%AF.19.07%402x.png)  
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/04aa3194c6fb43e895c2099e9fe37de7/CleanShot%202025-09-08%20at%2014.20.16.png)  
   
 アクセスを許可するIPアドレスを入力し、「変更する」ボタンを押下してください。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/6ef0ef29d3ba433abf169b63f69d3ced/CleanShot%202024-04-17%20at%205%E2%80%AF.30.40%402x.png)  
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/7b3aa588e88447ad8f0386b9ad265034/CleanShot%202025-09-08%20at%2014.22.03.png)  
 
 API単位での設定
 ---------
 
 API単位でのIP制限は、対象のAPIの「API設定」→「APIのIP制限」より設定が可能です。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/1aa6cfaca6c14f7fa37bf3dc05de5def/CleanShot%202024-04-18%20at%2010%E2%80%AF.18.14%402x.png)  
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/af086b4dc8d0405c9279d1e21cf92421/CleanShot%202025-09-08%20at%2014.23.46.png)  
   
 「個別に設定する」をオンにした後、アクセスを許可するIPアドレスを入力し、「変更する」ボタンを押下してください。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/850b9496d9c9445ea282a5ac06bba9cf/CleanShot%202024-04-18%20at%2010%E2%80%AF.22.24%402x.png)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/40e95743264f47b39bff3d06705d0128/CleanShot%202025-09-08%20at%2014.25.43.png)
 
-*   IPv4 / IPv6の**CIDR記法に対応**しています。
-*   一つのAPIに設定できる許可IPアドレスの上限数は、**Businessプランでは30個まで**です。
+一つのAPIに設定できる許可IPアドレスの上限数はプランによって異なります。
+
+*   Businessプラン：30個
+*   Enterpriseプラン：100個（ご要望に応じて調整可能）
 
 補足事項
 ====
