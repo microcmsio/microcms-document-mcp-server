@@ -124,7 +124,7 @@ APIキー作成モーダルの「マネジメントAPI（ベータ）」のタ�
 *   [メディアのアップロード](/management-api/post-media)
 *   [メディアの削除](https://document.microcms.io/management-api/delete-media-v2)
 *   [メンバーの詳細情報の取得](https://document.microcms.io/management-api/get-member)
-*   [API情報の取得](/management-api/get-api-info)
+*   [API情報の取得（一覧・詳細）](/management-api/get-api-info)
 
 APIキーによる権限設定のユースケース
 ===================
