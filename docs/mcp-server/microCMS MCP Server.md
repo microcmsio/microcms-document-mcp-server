@@ -150,6 +150,7 @@ microCMS MCP Serverを利用するには、クライアント側にNode.jsがイ
       }
     }
 
+
 ### Cursor
 
 1.  MCPサーバーを利用したいワークスペースで `.cursor/mcp.json` を作成します。
