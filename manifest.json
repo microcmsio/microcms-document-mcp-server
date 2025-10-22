@@ -1,7 +1,7 @@
 {
     "manifest_version": "0.2",
     "name": "microcms-document",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "display_name": "microCMS Document MCP Server",
     "description": "microCMSのドキュメントにアクセスするための Model Context Protocol (MCP) サーバーです。AIアシスタントがmicroCMSの最新ドキュメント内容を検索・取得できるようにします。",
     "author": {
