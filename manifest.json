@@ -1,13 +1,19 @@
 {
-    "dxt_version": "0.1",
-    "name": "microcms-document-mcp-server",
-    "display_name": "microCMSドキュメントMCPサーバー",
-    "version": "0.1.9",
-    "description": "microCMSドキュメントのMCP Serverです。LLMがmicroCMSの最新情報にアクセスして回答できるようになります。",
-    "icon": "assets/icon.png",
+    "manifest_version": "0.2",
+    "name": "microcms-document",
+    "version": "0.2.3",
+    "display_name": "microCMS Document MCP Server",
+    "description": "microCMSのドキュメントにアクセスするための Model Context Protocol (MCP) サーバーです。AIアシスタントがmicroCMSの最新ドキュメント内容を検索・取得できるようにします。",
     "author": {
         "name": "microcmsio",
         "url": "https://github.com/microcmsio"
+    },
+    "icon": "assets/icon.png",
+    "license": "MIT",
+    "homepage": "https://github.com/microcmsio/microcms-document-mcp-server",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/microcmsio/microcms-document-mcp-server"
     },
     "server": {
         "type": "node",
@@ -22,25 +28,22 @@
     "tools": [
         {
             "name": "fetch_general",
-            "description": "microCMSの一般的な情報を返します。"
+            "description": "microCMSについての質問に答える場合、まずこのツールを利用します。microCMS全体の概要や共通情報が書かれたドキュメントを返します。"
         },
         {
             "name": "list_documents",
-            "description": "docsディレクトリ内の利用可能なドキュメントファイル名の配列を返します。"
+            "description": "microCMSのドキュメントディレクトリのファイル名一覧を返します。カテゴリーを指定することで特定のサブディレクトリのみを対象にできます。"
         },
         {
             "name": "search_document",
-            "description": "指定されたドキュメントファイルの内容を取得します。"
+            "description": "指定されたファイル名のmicroCMSドキュメントを検索し、内容を返します。カテゴリーを指定することで特定のサブディレクトリのみを対象にできます。"
         }
     ],
     "keywords": [
         "microcms",
-        "headlesscms",
-        "document"
-    ],
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/microcmsio/microcms-document-mcp-server"
-    }
+        "headless-cms",
+        "documentation",
+        "api",
+        "mcp"
+    ]
 }
