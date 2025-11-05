@@ -76,7 +76,6 @@ directory: manual
 ========
 
 *   [リスト形式](/manual/create-api#h75db320363)のAPIのみご利用いただけます。
-*   [非対応のフィールド](/manual/csv-import#hd2bed78bf9)がございます。
 *   CSVファイルは**文字コード UTF-8（BOMなし）** でインポートしてください。
 
 対応フィールドとその入力形式
