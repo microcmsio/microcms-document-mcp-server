@@ -28,5 +28,9 @@
     "@types/node": "^24.0.12",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microcmsio/microcms-document-mcp-server"
   }
 }
