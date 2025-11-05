@@ -16,7 +16,8 @@
   "scripts": {
     "build": "tsc",
     "start": "tsx src/index.ts",
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
     "microcms-js-sdk": "^3.2.0",
