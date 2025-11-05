@@ -171,6 +171,18 @@ category01,category02
 
 100
 
+カスタム
+
+JSON（登録可能なキーのみ）(\*7)
+
+{"fieldId":"xxxxxxxx","some\_value": "xxxxxxxx"}
+
+繰り返し
+
+JSON配列（登録可能なキーのみ）(\*7)
+
+\[{"fieldId":"xxxxxxxx","some\_value": "xxxxxxxx"},{"fieldId":"xxxxxxxx","some\_value": "xxxxxxxx"}\]
+
 ファイル (\*6)
 
 microCMSで配信されているファイルのURL
@@ -181,7 +193,7 @@ https://files.microcms-assets.io/assets/xxxx/yyyy/manual.pdf
 
 JSON（登録可能なキーのみ）(\*7)
 
-{""id"":""xxxxxxxx"", ""title"":""xxxxxxxx"", ""description"":""xxxxxxxx"", ""imageUrl"":""https://images.microcms-assets.io/assets/xxxxxxxx/yyyyyyyy/sample1.png"", ""updatedAt"":""2025-01-01T00:00:00.000Z"",""data"":{""id"": ""123""}}
+{"id":"xxxxxxxx", "title":"xxxxxxxx", "description":"xxxxxxxx", "imageUrl":"https://images.microcms-assets.io/assets/xxxxxxxx/yyyyyyyy/sample1.png", "updatedAt":"2025-01-01T00:00:00.000Z","data":{"id": "123"}}
 
 *   (\*1) テキストエディタなどからCSVファイルを編集する場合、入力値に改行やカンマ(,)を利用する際は、ダブルクォーテーション(")で囲む必要があります。
 *   (\*2) **リッチエディタにて対応しているHTMLの範囲のみ入稿することが可能**です。すべてのHTMLの記法に対応しているわけではないため、ご注意ください。利用できるフォーマットは[リッチエディタのWRITE API](https://document.microcms.io/manual/rich-editor-write-api)と同様です。
@@ -189,13 +201,7 @@ JSON（登録可能なキーのみ）(\*7)
 *   (\*4) [メディアのカスタムドメイン設定](/manual/custom-domain)を利用している場合、カスタムドメインのURLでも指定可能です。複数画像、ファイルも同様です。
 *   (\*5) 1つのフィールドに対して、最大100枚までインポートできます。
 *   (\*6) Hobbyプランは対象外です。
-*   (\*7) CSVフォーマットの仕様上、`"`は`""`で登録する必要があります。
-
-非対応のフィールド
----------
-
-*   カスタム
-*   繰り返し
+*   (\*7) CSVフォーマットの仕様上、テキストエディタなどから編集する際には`"`は`""`で登録する必要があります。
 
 制約事項
 ----
