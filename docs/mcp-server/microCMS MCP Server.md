@@ -83,9 +83,25 @@ API
 
 [コンテンツの削除](https://document.microcms.io/content-api/delete-content)
 
-**microcms\_get\_media**
+**microcms\_get\_list\_meta**
 
 マネジメントAPI
+
+[コンテンツ一覧の取得](https://document.microcms.io/management-api/get-list-contents-management)
+
+**microcms\_get\_content\_meta**
+
+[コンテンツ詳細の取得](https://document.microcms.io/management-api/get-content)
+
+**microcms\_patch\_content\_status**
+
+[コンテンツの公開状態を変更](https://document.microcms.io/management-api/patch-contents-status)
+
+**microcms\_patch\_content\_created\_by**
+
+[コンテンツの作成者を変更](https://document.microcms.io/management-api/patch-contents-created-by)
+
+**microcms\_get\_media**
 
 [メディアの取得](https://document.microcms.io/management-api/get-media-v2)
 
@@ -93,9 +109,21 @@ API
 
 [メディアのアップロード](https://document.microcms.io/management-api/post-media)
 
+**microcms\_delete\_media**
+
+[メディアの削除](https://document.microcms.io/management-api/delete-media-v2)
+
+**microcms\_get\_api\_list**
+
+[API情報（一覧）の取得](https://document.microcms.io/management-api/get-api-list)
+
 **microcms\_get\_api\_info**
 
-[API情報の取得](https://document.microcms.io/management-api/get-api-info)
+[API情報（詳細）の取得](https://document.microcms.io/management-api/get-api-info)
+
+**microcms\_get\_member**
+
+[メンバー詳細情報の取得](https://document.microcms.io/management-api/get-member)
 
 設定
 ==
@@ -149,7 +177,6 @@ microCMS MCP Serverを利用するには、クライアント側にNode.jsがイ
         }
       }
     }
-
 
 ### Cursor
 
