@@ -115,11 +115,11 @@ API
 
 **microcms\_get\_api\_list**
 
-[API情報（一覧）の取得](https://document.microcms.io/management-api/get-api-list)
+[API情報一覧の取得](https://document.microcms.io/management-api/get-api-list)
 
 **microcms\_get\_api\_info**
 
-[API情報（詳細）の取得](https://document.microcms.io/management-api/get-api-info)
+[API情報詳細の取得](https://document.microcms.io/management-api/get-api-info)
 
 **microcms\_get\_member**
 
