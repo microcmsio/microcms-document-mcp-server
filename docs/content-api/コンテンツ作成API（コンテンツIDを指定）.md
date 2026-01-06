@@ -31,9 +31,6 @@ microCMSではJSON形式のデータのみ扱っているため、_application/j
 クエリパラメータ
 ========
 
-WRITE APIのクエリはTeamプラン、Businessプラン、Enterpriseプランでご利用いただける機能です。  
-プランごとに利用できる機能については、[料金プランページ](https://microcms.io/pricing)をご覧ください。
-
 status
 ------
 
