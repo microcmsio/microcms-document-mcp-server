@@ -102,11 +102,11 @@ APIスキーマ設定に反映させるには、「閉じる」で設定画面�
 
 ### 1\. テキストフィールド
 
-https://document.microcms.io/manual/text-field
+https://document.microcms.io/manual/text-field#h4ba8f153e0
 
 ### 2\. テキストエリア
 
-https://document.microcms.io/manual/textarea
+https://document.microcms.io/manual/textarea#h4ba8f153e0
 
 ### 3\. リッチエディタ
 
@@ -143,35 +143,35 @@ https://document.microcms.io/manual/textarea
 
 ### 5\. 画像
 
-https://document.microcms.io/manual/image
+https://document.microcms.io/manual/image#h4ba8f153e0
 
 ### 6\. 複数画像
 
-https://document.microcms.io/manual/image-list
+https://document.microcms.io/manual/image-list#h4ba8f153e0
 
 ### 7\. 日時
 
-https://document.microcms.io/manual/date
+https://document.microcms.io/manual/date#h4ba8f153e0
 
 ### 8\. 真偽値
 
-https://document.microcms.io/manual/boolean
+https://document.microcms.io/manual/boolean#h4ba8f153e0
 
 ### 9\. セレクトフィールド
 
-https://document.microcms.io/manual/select-field
+https://document.microcms.io/manual/select-field#h4ba8f153e0
 
 ### 10\. コンテンツ参照
 
-https://document.microcms.io/manual/relation
+https://document.microcms.io/manual/relation#h4ba8f153e0
 
 ### 11\. 複数コンテンツ参照
 
-https://document.microcms.io/manual/relation-list
+https://document.microcms.io/manual/relation-list#h4ba8f153e0
 
 ### 12\. 数字
 
-https://document.microcms.io/manual/number
+https://document.microcms.io/manual/number#h4ba8f153e0
 
 ### 13\. カスタム
 
@@ -183,9 +183,7 @@ https://document.microcms.io/manual/repeat-field
 
 ### 15\. ファイル
 
-フィールド特有の設定項目なし
-
-https://document.microcms.io/manual/file
+https://document.microcms.io/manual/file#h4ba8f153e0
 
 ### 16\. 拡張フィールド
 
