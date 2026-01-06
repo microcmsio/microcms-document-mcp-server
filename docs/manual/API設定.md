@@ -175,45 +175,19 @@ https://document.microcms.io/manual/number
 
 ### 13\. カスタム
 
-#### カスタムフィールド
-
-使用するカスタムフィールドを設定します。
-
 https://document.microcms.io/manual/custom-field
-
-  
 
 ### 14\. 繰り返し
 
-#### 繰り返しフィールド
-
-繰り返しフィールドに使用するカスタムフィールドを設定します。
-
-#### 並び順
-
-カスタムフィールドを選択する際の並び順を設定します。
-
-#### 繰り返しフィールドの数を制限する
-
-繰り返しフィールドの最小数と最大数を設定します。
-
 https://document.microcms.io/manual/repeat-field
-
-  
 
 ### 15\. ファイル
 
 フィールド特有の設定項目なし
 
-ファイルフィールドはTeamプラン以降でご利用いただけます。
-
-  
+https://document.microcms.io/manual/file
 
 ### 16\. 拡張フィールド
-
-#### 拡張フィールド URL
-
-拡張フィールドに使用するURLを設定します。
 
 https://document.microcms.io/manual/iframe-field
 
