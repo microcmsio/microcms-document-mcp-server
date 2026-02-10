@@ -48,6 +48,7 @@ microCMSではJSON形式のデータのみ扱っているため、`application/j
 **■対応していない変更**
 
 *   「公開中」→「公開中かつ下書き中」
+    *   マネジメントAPIでは未対応ですが、コンテンツAPIのPATCHリクエストにて対応しています。詳細は「[PATCH /api/v1/{endpoint}/{content\_id}](https://document.microcms.io/content-api/patch-content#h929d25d495)」をご参照ください。
 *   「公開中」→「公開終了」
 *   「公開中かつ下書き中」→「公開中」（下書き中の内容を公開する）
 *   「公開終了」→「公開中」
