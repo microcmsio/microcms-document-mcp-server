@@ -172,7 +172,7 @@ containsと同様の注意事項がございますので、ご確認ください
 ### less\_than
 
 指定より小さいコンテンツを取得します。  
-（例：`createdAt[less_than]2023-11-23T03:00:00.000Z`、`count[less_than]25`）
+（例：`createdAt[less_than]2023-11-23T03:00:00Z`、`count[less_than]25`）
 
 *   日時を指定する場合、UTCで指定してください。なお、タイムゾーンの指定はできません。
 *   指定された値が同じ値の場合は、取得されません。
@@ -180,7 +180,7 @@ containsと同様の注意事項がございますので、ご確認ください
 ### greater\_than
 
 指定より大きいコンテンツを取得します。  
-（例：`createdAt[greater_than]2023-11-23T03:00:00.000Z`、`count[greater_than]25`）
+（例：`createdAt[greater_than]2023-11-23T03:00:00Z`、`count[greater_than]25`）
 
 *   日時を指定する場合、UTCで指定してください。なお、タイムゾーンの指定はできません。
 *   指定された値が同じ値の場合は、取得されません。
