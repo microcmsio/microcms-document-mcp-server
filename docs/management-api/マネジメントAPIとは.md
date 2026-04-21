@@ -21,7 +21,7 @@ directory: management-api
 
 マネジメントAPIの利用には、APIキーによる認証が必要となります。APIキーに対しては、権限を付与することで利用可能な操作を制限することができます。詳細はAPIキーのドキュメントをご確認ください。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/8f49ea4453424ccfa4ff43f2a2b553d1/CleanShot%202024-01-24%20at%2010.47.30.png)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/870b5e64b7344691ae5097b55ce47fb5/CleanShot%202025-08-21%20at%2011.41.17.png)
 
 https://document.microcms.io/content-api/x-microcms-api-key
 
@@ -60,3 +60,20 @@ https://document.microcms.io/management-api/get-media-v2
 https://document.microcms.io/management-api/post-media
 
 https://document.microcms.io/management-api/delete-media-v2
+
+メンバー
+----
+
+メンバーに関連するAPIです。
+
+https://document.microcms.io/management-api/get-member
+
+API
+---
+
+管理画面で定義したAPIに関連するAPIです。
+
+https://document.microcms.io/management-api/get-api-list
+
+https://document.microcms.io/management-api/get-api-info
+
