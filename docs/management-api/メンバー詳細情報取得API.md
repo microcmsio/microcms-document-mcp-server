@@ -14,9 +14,9 @@ X-MICROCMS-API-KEY
 ------------------
 
 GET APIリクエストの際に必要な認証キーです。  
-マネジメントAPIの権限で「メンバー詳細情報の取得」を有効にして、リクエストヘッダーに含めて送信してください。  
+マネジメントAPIの権限で「メンバーの取得 (一覧・詳細)」を有効にして、リクエストヘッダーに含めて送信してください。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/31fffdcd930a4c6b840be1f24d300642/CleanShot%202025-08-07%20at%206%E2%80%AF.14.12.png)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/8f3b1b376ee84cc4acf12af148f9999d/CleanShot%202026-04-01%20at%2011.40.27.png)
 
 X-MICROCMS-API-KEYが判別できると、第三者による不正なコンテンツの操作が可能となります。お取り扱いには十分ご注意ください。詳細は「[APIキー（APIの認証と権限管理）](https://document.microcms.io/content-api/x-microcms-api-key)」をご覧ください。
 
@@ -30,6 +30,7 @@ member\_id
 IDは管理画面のメンバー詳細画面や、各種マネジメントAPIのレスポンスの中で、確認可能です。
 
 レスポンスボディ
+=======
 
 正常に取得できた場合の、メンバー詳細のレスポンス例です。
 
