@@ -609,6 +609,12 @@ PATCH操作が許可されていません。[APIキー設定](https://document.m
 
 保存できるデータ量の制限（約200KB）を超過しています。対処法はヘルプ記事「[コンテンツの容量上限を超えたエラーが表示される。どうしたらよいですか？](https://help.microcms.io/ja/knowledge/content-limit-error)」をご参照ください。
 
+400 Bad Request
+
+`The status cannot be changed because it is closed.`
+
+公開終了のコンテンツはAPIからステータスを更新できません。管理画面から更新してください。
+
 DELETEメソッドのエラーレスポンス
 -------------------
 
