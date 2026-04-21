@@ -242,6 +242,16 @@ _figure_タグの場合でも上記挙動は変わりません。ただし、_fi
 
 `src`に外部URLの画像を指定する場合の方法については、ヘルプ記事「[WRITE APIでリッチエディタにコンテンツを登録する際、imgタグ内で外部URLの画像を指定する方法は？](https://help.microcms.io/ja/knowledge/write-api-external-img)」をご覧ください。
 
+画像の横位置
+======
+
+`figure` タグの`style` 属性に`text-align` を指定することで、画像の左揃え / 中央揃え / 右揃え の指定ができます。
+
+    <figure style='text-align: left;'>
+      <img src='https://images.microcms-assets.io/assets/service/test/file.png'
+              alt='' width='1200' height='630' />
+    </figure>
+
 ファイル
 ====
 
