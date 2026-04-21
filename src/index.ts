@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 const DOCS_DIR = path.join(__dirname, '..', 'docs');
 
 // 利用可能なカテゴリー
-const AVAILABLE_CATEGORIES = ['manual', 'content-api', 'management-api', 'image-api'] as const;
+const AVAILABLE_CATEGORIES = ['manual', 'content-api', 'management-api', 'image-api', 'mcp-server'] as const;
 type Category = typeof AVAILABLE_CATEGORIES[number];
 
 const server = new Server(
@@ -51,8 +51,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
           properties: {
             category: {
               type: 'string',
-              description: '検索するカテゴリー（マニュアル: manual, content-api, management-api, image-api）。指定しない場合は全カテゴリーを対象とします。',
-              enum: ['manual', 'content-api', 'management-api', 'image-api'],
+              description: '検索するカテゴリー（マニュアル: manual, content-api, management-api, image-api, mcp-server）。指定しない場合は全カテゴリーを対象とします。',
+              enum: ['manual', 'content-api', 'management-api', 'image-api', 'mcp-server'],
             },
           },
           required: [],
@@ -70,8 +70,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
             },
             category: {
               type: 'string',
-              description: '検索するカテゴリー（manual, content-api, management-api, image-api）。指定しない場合は全カテゴリーから検索します。',
-              enum: ['manual', 'content-api', 'management-api', 'image-api'],
+              description: '検索するカテゴリー（manual, content-api, management-api, image-api, mcp-server）。指定しない場合は全カテゴリーから検索します。',
+              enum: ['manual', 'content-api', 'management-api', 'image-api', 'mcp-server'],
             },
           },
           required: ['filename'],
