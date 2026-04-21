@@ -7,7 +7,7 @@ directory: manual
 
 コンテンツIDのフォーマットはAPI毎に設定が可能です。設定箇所は「API設定」→「コンテンツID」となります。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/c31a1f1d925c4c15b2783aade1ebb926/CleanShot%202023-08-16%20at%2012.24.53%402x.png)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/c82c34e4a52b40009de912f2fef3c3fc/CleanShot%202025-08-21%20at%2010.50.31.png)
 
 設定項目
 ----
@@ -40,12 +40,12 @@ directory: manual
 
 *   コンテンツの新規作成時
 *   POST APIの利用時
-*   ファイルインポート時（コンテンツIDを指定しない場合）
+*   CSVインポート時（コンテンツIDを指定しない場合）
 
 ### フォーマットの確認が行われるケース
 
 *   コンテンツIDの変更時
 *   PUT APIの利用時
-*   ファイルインポート時（コンテンツIDを指定する場合）
+*   CSVインポート時（コンテンツIDを指定する場合）
 
 コンテンツIDのフォーマットが不正の場合、操作はエラーとなります。
