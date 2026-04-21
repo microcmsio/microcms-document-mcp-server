@@ -17,7 +17,7 @@ X-MICROCMS-API-KEY
 リクエストの際に必要な認証キーです。  
 マネジメントAPIの権限で「メディアの削除」を有効にして、リクエストヘッダーに含めて送信してください。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/74ecfc2e3752428b985b013508f1fe76/CleanShot%202024-04-17%20at%200%E2%80%AF.49.26.png)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/f0782e64c831468f9ba65310ccecbf59/CleanShot%202025-08-21%20at%2011.58.04.png)
 
 X-MICROCMS-API-KEYが判別できると、第三者による不正なコンテンツの操作が可能となります。お取り扱いには十分ご注意ください。詳細は「[APIキー（APIの認証と権限管理）](https://document.microcms.io/content-api/x-microcms-api-key)」をご覧ください。
 
