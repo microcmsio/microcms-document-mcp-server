@@ -72,6 +72,25 @@ directory: manual
   
 ![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/cf313e7dfce74179afc7b620f01a7b5e/csv-import-6.png)
 
+エクスポートしたCSVファイルを利用する場合
+----------------------
+
+コンテンツのCSVエクスポートで出力したCSVファイルを利用して、コンテンツを登録できます。  
+CSVファイルのエクスポート方法は「[コンテンツのCSVエクスポート](https://document.microcms.io/manual/csv-export)」をご参照ください。  
+  
+1：エクスポートしたCSVファイルからid以外の[共通カラム](https://document.microcms.io/manual/csv-export#he50444d968)を削除して保存します。  
+  
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/d13ecbb0c1ab4ae88a552d6d061467b7/CleanShot%202026-05-13%20at%2015.16.48.png)  
+  
+２：このあとは、新規登録の場合の手順5以降と同様の流れとなります
+
+エクスポートしたCSVファイルをインポートする際、以下のようなケースでは、インポートできない場合があります。
+
+*   CSVインポートで対応していないフィールドや値の形式が含まれている場合
+*   権限不足により、一部のフィールドの値を取得できない状態でエクスポートした場合
+*   同一コンテンツについて、公開中（PUBLISH）と下書き中（DRAFT）の2行がCSVに含まれている場合
+*   既存コンテンツがあるAPIにそのままインポートし、コンテンツIDやユニーク制約のあるフィールドが重複する場合
+
 入力形式のルール
 ========
 
