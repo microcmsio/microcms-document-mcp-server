@@ -125,6 +125,14 @@ GET操作が許可されていません。[APIキー設定](https://document.mic
 
 400 Bad Request
 
+`Invalid 'filters' value. The value for 'contains' or 'not_contains' should not exceed 2000 characters.`
+
+クエリパラメータの "filters” の contains / not\_contains に指定した値が2000文字を超えています。2000文字以内の値を指定してください。
+
+文字数は、URLデコード後の検索文字列を基準に数えます。一般的な日本語や英数字は通常1文字として数えられますが、一部の漢字や絵文字などは、見た目の文字数より多く数えられる場合があります。
+
+400 Bad Request
+
 `invalid parameter.`
 
 クエリパラメータに不正な値が指定されています。クエリパラメータの指定方法を確認し、正しい値を指定してください。  
@@ -142,7 +150,7 @@ GET操作が許可されていません。[APIキー設定](https://document.mic
 
 \-
 
-リクエストURLの最大長（8KB）の制限を超過してます。リクエストURLを短くしてください。
+リクエストURLの最大長（8KB）の制限を超過しています。リクエストURLを短くしてください。
 
 POSTメソッドのエラーレスポンス
 -----------------
@@ -223,19 +231,25 @@ POST操作が許可されていません。[APIキー設定](https://document.mi
 
 `'{fieldId}' field invalid. The value sent does not fit the specified format.`
 
-“{fieldId}”に指定されている値は、設定された正規表現に合致していません。設定された正規表現に合致した値を指定してください。
+“{fieldId}”に指定されている値は、[APIスキーマ](https://document.microcms.io/manual/api-model-settings#hbf58befd50)で設定された正規表現に合致していません。設定された正規表現に合致した値を指定してください。
 
 400 Bad Request
 
 `'{fieldId}’ field invalid. The value sent does not meet the number of characters allowed.`
 
-“{fieldId}”に指定されてる値が、登録できる文字数の最小値を満たしていないか最大値を超過しています。登録できる文字数を確認し、適切な値を指定してください。
+“{fieldId}”に指定されている値が、[APIスキーマ](https://document.microcms.io/manual/api-model-settings#hbf58befd50)で設定された登録できる文字数の最小値を満たしていないか最大値を超過しています。登録できる文字数を確認し、適切な値を指定してください。
 
 400 Bad Request
 
 `'{fieldId}' field invalid. The value sent does not in the range.`
 
-“{fieldId}”に指定されている値が、登録できる数の最小値を満たしていないか最大値を超過しています。登録できる数を確認し、適切な値を指定してください。
+“{fieldId}”に指定されている値が、[APIスキーマ](https://document.microcms.io/manual/api-model-settings#hbf58befd50)で設定された登録できる数の最小値を満たしていないか最大値を超過しています。登録できる数を確認し、適切な値を指定してください。
+
+400 Bad Request
+
+`'{fieldId}' field invalid. The value sent exceeds the upper or lower limit.`
+
+“{fieldId}”に指定されている値が、microCMSが定める下限値(-9007199254740991)を満たしていないか上限値(9007199254740991)を超過しています。入力できる値を指定してください。
 
 400 Bad Request
 
@@ -271,7 +285,7 @@ POST操作が許可されていません。[APIキー設定](https://document.mi
 
 `'{fieldId}' field invalid. The image width must be {height} px.`
 
-“{fieldId}”に指定された画像は、画像のサイズ制限（heigth）を超過しています。画像のサイズ制限で設定した値より小さいサイズの画像を指定してください。
+“{fieldId}”に指定された画像は、画像のサイズ制限（height）を超過しています。画像のサイズ制限で設定した値より小さいサイズの画像を指定してください。
 
 400 Bad Request
 
@@ -394,19 +408,25 @@ PUT操作が許可されていません。[APIキー設定](https://document.mic
 
 `'{fieldId}' field invalid. The value sent does not fit the specified format.`
 
-“{fieldId}”に指定されている値は、設定された正規表現に合致していません。設定された正規表現に合致した値を指定してください。
+“{fieldId}”に指定されている値は、[APIスキーマ](https://document.microcms.io/manual/api-model-settings#hbf58befd50)で設定された正規表現に合致していません。設定された正規表現に合致した値を指定してください。
 
 400 Bad Request
 
 `'{fieldId}’ field invalid. The value sent does not meet the number of characters allowed.`
 
-“{fieldId}”に指定されてる値が、登録できる文字数の最小値を満たしていないか最大値を超過しています。登録できる文字数を確認し、適切な値を指定してください。
+“{fieldId}”に指定されている値が、[APIスキーマ](https://document.microcms.io/manual/api-model-settings#hbf58befd50)で設定された登録できる文字数の最小値を満たしていないか最大値を超過しています。登録できる文字数を確認し、適切な値を指定してください。
 
 400 Bad Request
 
 `'{fieldId}' field invalid. The value sent does not in the range.`
 
-“{fieldId}”に指定されている値が、登録できる数の最小値を満たしていないか最大値を超過しています。登録できる数を確認し、適切な値を指定してください。
+“{fieldId}”に指定されている値が、[APIスキーマ](https://document.microcms.io/manual/api-model-settings#hbf58befd50)で設定された登録できる数の最小値を満たしていないか最大値を超過しています。登録できる数を確認し、適切な値を指定してください。
+
+400 Bad Request
+
+`'{fieldId}' field invalid. The value sent exceeds the upper or lower limit.`
+
+“{fieldId}”に指定されている値が、microCMSが定める下限値(-9007199254740991)を満たしていないか上限値(9007199254740991)を超過しています。入力できる値を指定してください。
 
 400 Bad Request
 
@@ -442,7 +462,7 @@ PUT操作が許可されていません。[APIキー設定](https://document.mic
 
 `'{fieldId}' field invalid. The image width must be {height} px.`
 
-“{fieldId}”に指定された画像は、画像のサイズ制限（heigth）を超過しています。画像のサイズ制限で設定した値より小さいサイズの画像を指定してください。
+“{fieldId}”に指定された画像は、画像のサイズ制限（height）を超過しています。画像のサイズ制限で設定した値より小さいサイズの画像を指定してください。
 
 400 Bad Request
 
@@ -529,19 +549,25 @@ PATCH操作が許可されていません。[APIキー設定](https://document.m
 
 `'{fieldId}' field invalid. The value sent does not fit the specified format.`
 
-“{fieldId}”に指定されている値は、設定された正規表現に合致していません。設定された正規表現に合致した値を指定してください。
+“{fieldId}”に指定されている値は、[APIスキーマ](https://document.microcms.io/manual/api-model-settings#hbf58befd50)で設定された正規表現に合致していません。設定された正規表現に合致した値を指定してください。
 
 400 Bad Request
 
 `'{fieldId}’ field invalid. The value sent does not meet the number of characters allowed.`
 
-“{fieldId}”に指定されてる値が、登録できる文字数の最小値を満たしていないか最大値を超過しています。登録できる文字数を確認し、適切な値を指定してください。
+“{fieldId}”に指定されている値が、[APIスキーマ](https://document.microcms.io/manual/api-model-settings#hbf58befd50)で設定された登録できる文字数の最小値を満たしていないか最大値を超過しています。登録できる文字数を確認し、適切な値を指定してください。
 
 400 Bad Request
 
 `'{fieldId}' field invalid. The value sent does not in the range.`
 
-“{fieldId}”に指定されている値が、登録できる数の最小値を満たしていないか最大値を超過しています。登録できる数を確認し、適切な値を指定してください。
+“{fieldId}”に指定されている値が、[APIスキーマ](https://document.microcms.io/manual/api-model-settings#hbf58befd50)で設定された登録できる数の最小値を満たしていないか最大値を超過しています。登録できる数を確認し、適切な値を指定してください。
+
+400 Bad Request
+
+`'{fieldId}' field invalid. The value sent exceeds the upper or lower limit.`
+
+“{fieldId}”に指定されている値が、microCMSが定める下限値(-9007199254740991)を満たしていないか上限値(9007199254740991)を超過しています。入力できる値を指定してください。
 
 400 Bad Request
 
@@ -577,7 +603,7 @@ PATCH操作が許可されていません。[APIキー設定](https://document.m
 
 `'{fieldId}' field invalid. The image width must be {height} px.`
 
-“{fieldId}”に指定された画像は、画像のサイズ制限（heigth）を超過しています。画像のサイズ制限で設定した値より小さいサイズの画像を指定してください。
+“{fieldId}”に指定された画像は、画像のサイズ制限（height）を超過しています。画像のサイズ制限で設定した値より小さいサイズの画像を指定してください。
 
 400 Bad Request
 
@@ -590,6 +616,12 @@ PATCH操作が許可されていません。[APIキー設定](https://document.m
 `The amount of data that can be saved has been exceeded. Please adjust the contents and try again.`
 
 保存できるデータ量の制限（約200KB）を超過しています。対処法はヘルプ記事「[コンテンツの容量上限を超えたエラーが表示される。どうしたらよいですか？](https://help.microcms.io/ja/knowledge/content-limit-error)」をご参照ください。
+
+400 Bad Request
+
+`The status cannot be changed because it is closed.`
+
+公開終了のコンテンツはAPIからステータスを更新できません。管理画面から更新してください。
 
 DELETEメソッドのエラーレスポンス
 -------------------
