@@ -112,6 +112,7 @@ X-MICROCMS-API-KEYが判別できると、第三者による不正なコンテ�
 
 マネジメントAPI特有の値は以下のとおりです。これらの値はコンテンツAPIには含まれません。
 
+*   `draftKey`
 *   `closedAt`
 *   `status`
 *   `customStatus`
