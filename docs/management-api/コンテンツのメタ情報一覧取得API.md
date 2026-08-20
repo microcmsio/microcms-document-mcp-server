@@ -127,6 +127,7 @@ contentsについて
 
 `contents`内のオブジェクトに含まれるマネジメントAPI特有の値は以下のとおりです。これらの値はコンテンツAPIには含まれません。
 
+*   `draftKey`
 *   `closedAt`
 *   `status`
 *   `customStatus`
