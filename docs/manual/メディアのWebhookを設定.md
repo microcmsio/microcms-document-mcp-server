@@ -23,17 +23,26 @@ Webhookのタイミング
 
 ###
 
-[マネジメントAPIを利用してアップロード](/management-api/post-media)した場合は、Webhook通知は送信されませんのでご注意ください。
+以下の場合は、Webhook通知は送信されません。ご注意ください。
+
+*   [マネジメントAPIを利用してアップロード](/management-api/post-media)した場合
 
 ### メディアの更新時
 
 管理画面でメディアを再アップロードしたとき／ファイル名を変更したときに通知を行います。
 
+以下の場合は、Webhook通知は送信されません。ご注意ください。
+
+*   [メディアの作成者を変更](/manual/media-management#h96ca51caf5)した場合
+
 ### メディアの削除時
 
 管理画面でメディアを削除したときに通知を行います。
 
-[マネジメントAPIを利用して削除](/management-api/delete-media-v2)した場合、および、[メディアの全件削除](/manual/media-management#h88d26267bd)を利用した場合は、Webhook通知は送信されませんのでご注意ください。
+以下の場合は、Webhook通知は送信されません。ご注意ください。
+
+*   [マネジメントAPIを利用して削除](/management-api/delete-media-v2)した場合
+*   [メディアの全件削除](/manual/media-management#h88d26267bd)を利用した場合
 
 Webhook通知について
 =============
@@ -110,7 +119,7 @@ microCMSからの通知を受け取るサーバは、**一般公開**をして�
   
 具体的には、URLの設定時に`?auth=XXX` などmicroCMSと受け取り側サーバにしか知り得ない値を設定しておき、受け取り側のサーバでこの値が正しいかどうか（≒microCMSからのリクエストであるか否か）検証を行う方法が考えられます。
 
-コンテンツのWebhookと同様に、Webhookリクエストのヘッダに署名値（Signiture）を付与する対応については、検討を進めています。
+コンテンツのWebhookと同様に、Webhookリクエストのヘッダに署名値（Signature）を付与する対応については、検討を進めています。
 
 Webhookの詳細仕様
 ============
