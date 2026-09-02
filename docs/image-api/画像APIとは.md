@@ -43,7 +43,7 @@ https://docs.imgix.com/best-practices/guide-to-image-types#which-image-formats-c
 
     // 画像フィールド
     "image": {
-            "url": "https://images.microcms-assets.io/assets/xxxx/yyyy/image.png.",
+            "url": "https://images.microcms-assets.io/assets/xxxx/yyyy/image.png",
             "height": 630,
             "width": 1200
     }
