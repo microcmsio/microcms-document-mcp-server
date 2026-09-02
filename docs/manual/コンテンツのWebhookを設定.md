@@ -8,7 +8,7 @@ directory: manual
 コンテンツの変更時に外部システムとの連携を行うための機能として、Webhook機能を用意しています。  
 設定は各APIの「API設定」→「Webhook」で行うことができます。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/5f05c25e6c8e4232962da9113680369c/CleanShot%202022-04-27%20at%2013.55.54%402x.png)  
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/02171c5ed6ce4056a7576059a81daa2e/CleanShot%202025-08-21%20at%2010.56.27.png)  
   
 追加ボタンから、Webhookの種類を選び、設定を行ってください。  
 設定できるWebhookは、以下の9種類です。
@@ -84,7 +84,7 @@ Webhookのタイミング
 
 ### コンテンツの公開終了（予約設定による操作）
 
-コンテンツの公開停止予約機能によって、「公開中」もしくは「公開中かつ下書き中」のコンテンツが「公開終了」に変更された際に通知します。
+コンテンツの公開終了予約機能によって、「公開中」もしくは「公開中かつ下書き中」のコンテンツが「公開終了」に変更された際に通知します。
 
 ### コンテンツの並び替え
 
@@ -176,7 +176,7 @@ DELETE APIによって「下書き中」のコンテンツが削除された際�
 7\. 公開中かつ下書き中コンテンツの下書き破棄時
 -------------------------
 
-「公開中かつ下書き中」のコンテンツの下書きを破棄した際に通知を行います。
+管理画面の操作によって「公開中かつ下書き中」のコンテンツの下書きを破棄した際に通知を行います。
 
 8\. APIの設定変更時
 -------------
@@ -194,7 +194,7 @@ APIが削除された際に通知を行います。
 Slack
 -----
 
-SlackへのWebhookには以下の情報が必須で必要です。  
+SlackへのWebhookには以下の情報が必要です。  
 Slack側の操作については[公式ドキュメント](https://api.slack.com/messaging/webhooks)等をご参照ください。  
 
 *   Slackで発行するWebhook URL
@@ -208,7 +208,7 @@ URL部分にはデフォルトでは管理画面のURLが入りますが、設�
 Chatwork
 --------
 
-ChatworkへのWebhookには以下の情報が必須で必要です。  
+ChatworkへのWebhookには以下の情報が必要です。  
 
 *   ChatworkのAPIトークン：[Chatworkドキュメント](https://help.chatwork.com/hc/ja/articles/115000172402-API%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E3%82%92%E7%99%BA%E8%A1%8C%E3%81%99%E3%82%8B)
 *   部屋ID：通常URLに含まれる rid000000000 のうちの数値部分です。
@@ -262,7 +262,7 @@ microCMSからのWebhookによってビルド処理を開始できます。
 
 GitHub Actionsの設定方法の詳細については、ヘルプ記事「[【コンテンツのWebhook連携】GitHub Actionsの設定方法について](https://help.microcms.io/ja/knowledge/webhook-github-actions-settings)」をご覧ください。
 
-トークンが有効期限になった際は、新規にトークンを取得いただき、値を上書きして設定できます。
+トークンの有効期限が切れた際は、新規にトークンを取得いただき、値を上書きして再度設定してください。
 
 ### リクエスト内容
 
@@ -299,13 +299,31 @@ dispatchイベント呼び出し時のリクエストボディには、`event_ty
         "type": "new"
     }
 
-*   `service` - 変更のあったコンテンツが属するサービスのサブドメインが入ります。
-*   `api` - APIの更新時・削除時に指定したエンドポイントが入ります。
-*   `id` - コンテンツのidが入ります。コンテンツに関する操作が行われた場合のみ含まれます。
-*   `draftKey` - 管理画面で取得できる下書きキー（draftKey）が入ります。コンテンツが下書き、もしくは予約公開状態の場合にのみ含まれます。
-*   `type` - 変更の種類です。新規追加時は`new`、編集時は`edit`、削除時は`delete`が入ります。（コンテンツの公開ステータスの変更とは関係なく、データに対する変更の種類となります。）
+項目
 
-これらの値はGitHub Actions内で`github.event.client_payload`として参照できます。
+説明
+
+`service`
+
+変更のあったコンテンツが属するサービスのサブドメインが入ります。
+
+`api`
+
+APIの更新時・削除時に指定したエンドポイントが入ります。
+
+`id`
+
+コンテンツのidが入ります。コンテンツに関する操作が行われた場合のみ含まれます。
+
+`draftKey`
+
+管理画面で取得できる下書きキー（`draftKey`）が入ります。コンテンツが下書き、もしくは予約公開状態の場合にのみ含まれます。
+
+`type`
+
+変更の種類です。新規追加時は`new`、編集時は`edit`、削除時は`delete`が入ります。（コンテンツの公開ステータスの変更とは関係なく、データに対する変更の種類となります。）
+
+これらの値はGitHub Actions内で`github.event.client_payload`として参照できます。  
 
 メール通知
 -----
@@ -340,7 +358,7 @@ dispatchイベント呼び出し時のリクエストボディには、`event_ty
 microCMSにはWebhookリクエストがmicroCMSからのものであることを検証するためのヘッダ値を付与できます。  
 付与にあたってはシークレット値を設定する必要があり、microCMSでは設定することを推奨いたします。  
   
-シークレット値が設定されている場合のみ、リクエストのヘッダに`X-MICROCMS-Signature: <COMPUTED_HASH>`が付与されます。  
+シークレット値が設定されている場合のみ、リクエストのヘッダに`x-microcms-signature: <COMPUTED_HASH>`が付与されます。  
 ※ペイロードはmicroCMSがシークレット値とリクエストボディからSHA-256を使用したハッシュベースのHMACで生成します。  
   
 シークレット値はカスタム通知の設定画面で変更できます。  
@@ -351,7 +369,7 @@ microCMSにはWebhookリクエストがmicroCMSからのものであることを
 
 以下2つの値を比較することで検証を行うことができ、リクエストがmicroCMSからのものであることを検証可能です。
 
-*   `X-MICROCMS-Signature`ヘッダで受け取った値
+*   `x-microcms-signature`ヘッダで受け取った値
 *   ペイロード（`request.body` ）と設定したシークレット値を元にした値
 
 一例としてNode.jsの場合、検証は以下のような実装で行うことができます。
@@ -362,8 +380,20 @@ microCMSにはWebhookリクエストがmicroCMSからのものであることを
       .createHmac('sha256', <設定したシークレット>)
       .update(request.body)
       .digest('hex');
-    const signature = request.headers['X-MICROCMS-Signature'];
-    if (!crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expectedSignature))) {
+    
+    const signature = request.headers['x-microcms-signature'];
+    
+    if (typeof signature !== 'string') {
+      throw new Error('Invalid signature.');
+    }
+    
+    const signatureBuffer = Buffer.from(signature);
+    const expectedSignatureBuffer = Buffer.from(expectedSignature);
+    
+    if (
+      signatureBuffer.length !== expectedSignatureBuffer.length ||
+      !crypto.timingSafeEqual(signatureBuffer, expectedSignatureBuffer)
+    ) {
       throw new Error('Invalid signature.');
     }
 
@@ -373,7 +403,7 @@ microCMSにはWebhookリクエストがmicroCMSからのものであることを
 ### ヘッダ
 
 リクエストヘッダには `Content-Type: application/json` が含まれます。  
-また、上述のシークレットを設定済みの場合は `X-MICROCMS-Signature: <SIGNATUR_VALUE>` が含まれます。  
+また、上述のシークレットを設定済みの場合は `x-microcms-signature: <SIGNATURE_VALUE>` が含まれます。  
   
 任意のリクエストヘッダーを追加することも可能です。**カスタムリクエストヘッダー** の「+」ボタンをクリックして追加してください。  
   
@@ -381,9 +411,6 @@ microCMSにはWebhookリクエストがmicroCMSからのものであることを
   
 ![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/44861c7e4fb64964b9191bc9d2bd69fa/CleanShot%202025-02-07%20at%2010.27.49.png)
 
-リクエストヘッダ「X-MICROCMS-Signature」は、Webhookの種類によっては、「x-microcms-signature（全て小文字）」の表記で送信される場合がございます。  
-本ヘッダの処理にあたっては、大文字・小文字を区別しない形での実装をお願い申し上げます。  
-  
 セキュリティの観点から、microCMSのドメイン（.microcms.io, .microcms-management.io）宛てにWebhookを設定することを制限しています。
 
 ### ボディ
@@ -427,38 +454,92 @@ microCMSにはWebhookリクエストがmicroCMSからのものであることを
       },
     }
 
-*   `service` - 変更のあったコンテンツが属するサービスのサブドメインが入ります。
-*   `api` - API作成時・更新時に指定したエンドポイントが入ります。
-*   `id` - コンテンツのidが入ります。APIに関する操作の場合は`null`が入ります。
-*   `type` - 変更の種類です。新規追加時は`new`、編集時は`edit`、削除時は`delete`が入ります。（コンテンツの公開ステータスの変更とは関係なく、データに対する変更の種類となります。）
-*   `contents` - コンテンツ内容が入ります。APIに関する操作の場合は`null`が入ります。
-*   `contents.old` - コンテンツの編集前もしくは削除前の内容が含まれます。コンテンツの新規作成時には`null`が入ります。
-*   `contents.old.id` - コンテンツの編集前もしくは削除前のコンテンツの`id`が含まれます。
-*   `contents.old.status` - コンテンツの公開状態を配列で示します。公開中は`PUBLISH`、下書き中は`DRAFT`、公開終了は`CLOSED`が含まれます。
-*   `contents.old.draftKey` - コンテンツが下書き状態が含まれる場合に、管理画面で取得できる下書きキー（draftKey）が入ります。公開状態のみの場合は`null`が入ります。
-*   `contents.old.publishValue` - 公開状態のコンテンツをGET APIで取得した際のjsonデータが含まれます。
-*   `contents.old.draftValue` - 下書き状態のコンテンツをGET APIで取得した際のjsonデータが含まれます。
-*   `contents.new` - コンテンツの作成後もしくは編集後の内容が含まれます。コンテンツの削除時には`null`が入ります。
-*   `contents.new.id` - コンテンツの作成後もしくは編集後のコンテンツの`id`が含まれます。
-*   `contents.new.status` - コンテンツの公開状態を配列で示します。公開中は`PUBLISH`、下書き中は`DRAFT`、公開終了は`CLOSED`が含まれます。
-*   `contents.new.draftKey` - コンテンツが下書き状態が含まれる場合に、管理画面で取得できる下書きキー（draftKey）が入ります。公開状態のみの場合は`null`が入ります。
-*   `contents.new.publishValue` - 公開状態のコンテンツをGET APIで取得した際のjsonデータが含まれます。
-*   `contents.new.draftValue` - 下書き状態のコンテンツをGET APIで取得した際のjsonデータが含まれます。
+項目
+
+説明
+
+`service`
+
+変更のあったコンテンツが属するサービスのサブドメインが入ります。
+
+`api`
+
+API作成時・更新時に指定したエンドポイントが入ります。
+
+`id`
+
+コンテンツのidが入ります。APIに関する操作の場合は`null`が入ります。
+
+`type`
+
+変更の種類です。新規追加時は`new`、編集時は`edit`、削除時は`delete`が入ります。（コンテンツの公開ステータスの変更とは関係なく、データに対する変更の種類となります。）
+
+`contents`
+
+コンテンツ内容が入ります。APIに関する操作の場合は`null`が入ります。
+
+`contents.old`
+
+コンテンツの編集前もしくは削除前の内容が含まれます。コンテンツの新規作成時には`null`が入ります。
+
+`contents.old.id`
+
+コンテンツの編集前もしくは削除前のコンテンツの`id`が含まれます。
+
+`contents.old.status`
+
+コンテンツの公開状態を配列で示します。公開中は`PUBLISH`、下書き中は`DRAFT`、公開終了は`CLOSED`が含まれます。
+
+`contents.old.draftKey`
+
+コンテンツが下書き状態が含まれる場合に、管理画面で取得できる下書きキー（draftKey）が入ります。公開状態のみの場合は`null`が入ります。
+
+`contents.old.publishValue`
+
+公開状態のコンテンツをGET APIで取得した際のjsonデータが含まれます。
+
+`contents.old.draftValue`
+
+下書き状態のコンテンツをGET APIで取得した際のjsonデータが含まれます。
+
+`contents.new`
+
+コンテンツの作成後もしくは編集後の内容が含まれます。コンテンツの削除時には`null`が入ります。
+
+`contents.new.id`
+
+コンテンツの作成後もしくは編集後のコンテンツの`id`が含まれます。
+
+`contents.new.status`
+
+コンテンツの公開状態を配列で示します。公開中は`PUBLISH`、下書き中は`DRAFT`、公開終了は`CLOSED`が含まれます。
+
+`contents.new.draftKey`
+
+コンテンツが下書き状態が含まれる場合に、管理画面で取得できる下書きキー（draftKey）が入ります。公開状態のみの場合は`null`が入ります。
+
+`contents.new.publishValue`
+
+公開状態のコンテンツをGET APIで取得した際のjsonデータが含まれます。
+
+`contents.new.draftValue`
+
+下書き状態のコンテンツをGET APIで取得した際のjsonデータが含まれます。
 
 Webhookの動作確認およびデバッグについて
 -----------------------
 
-カスタム通知の動作確認およびデバッグの際には、「[devhook](https://devhook.app/)」などのWebhookの検証ツールをご利用いただくと便利です。
+カスタム通知の動作確認およびデバッグの際には、「[Webhook.site](https://webhook.site/)」などのWebhookの検証ツールをご利用いただくと便利です。
 
 ### ご利用の流れ
 
 1.  カスタム通知の設定を追加する
-2.  カスタム通知のURL欄にdevhookで取得したURLをコピーする
-3.  実際に管理画面上でトリガーとなる操作をおこない、devhook上でアウトプットを確認する
+2.  カスタム通知のURL欄に検証ツールで取得したURLをコピーする
+3.  実際に管理画面上でトリガーとなる操作をおこない、検証ツール上でアウトプットを確認する
 
 **▼アウトプットのイメージ**  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/16f4188a4a1148de90b8da5063f99b87/CleanShot%202023-07-05%20at%2018.23.26%402x.png)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/c2c5e15a9b1a44e683a413e44131c95c/CleanShot%202026-08-13%20at%2015.50.04%402x.png?w=1200&h=572)
 
 上記のような検証ツールはあくまで外部サービスですので、リクエストボディなどの情報は外部に共有されます。流出させてはいけないデータは使用しないなど、お取り扱いにはご注意ください。
 
