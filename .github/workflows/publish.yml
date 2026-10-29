@@ -13,15 +13,16 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: '24.22.1'
+          node-version: '26'
           registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
 
-      - name: Install npm
-        run: npm install -g npm@11.21.1
+      - name: Show npm version
+        run: npm --version
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
