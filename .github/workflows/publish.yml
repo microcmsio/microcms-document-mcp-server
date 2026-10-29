@@ -21,8 +21,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
 
-      - name: Show npm version
-        run: npm --version
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
