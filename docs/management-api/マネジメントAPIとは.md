@@ -19,9 +19,8 @@ directory: management-api
 仕様
 ==
 
-マネジメントAPIの利用には、APIキーによる認証が必要となります。APIキーに対しては、権限を付与することで利用可能な操作を制限することができます。詳細はAPIキーのドキュメントをご確認ください。  
-  
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/1299889d582144f3bee7318f5e62993c/CleanShot%202026-04-10%20at%2015.09.53%402x.png)
+マネジメントAPIの利用には、APIキーによる認証が必要となります。  
+APIキーに対しては、権限を付与することで利用可能な操作を制限することができます。詳細は[APIキー](/content-api/x-microcms-api-key)のドキュメントをご確認ください。
 
 https://document.microcms.io/content-api/x-microcms-api-key
 
@@ -55,6 +54,8 @@ https://document.microcms.io/management-api/patch-contents-status
 
 https://document.microcms.io/management-api/patch-contents-created-by
 
+https://document.microcms.io/management-api/put-contents-reservation
+
 メディア
 ----
 
@@ -85,3 +86,20 @@ API
 https://document.microcms.io/management-api/get-api-list
 
 https://document.microcms.io/management-api/get-api-info
+
+https://document.microcms.io/management-api/post-apis
+
+ロール
+---
+
+ロールに関連するAPIです。
+
+https://document.microcms.io/management-api/get-roles
+
+https://document.microcms.io/management-api/get-role
+
+https://document.microcms.io/management-api/post-roles
+
+https://document.microcms.io/management-api/patch-roles
+
+https://document.microcms.io/management-api/delete-roles
