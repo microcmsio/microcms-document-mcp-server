@@ -18,15 +18,22 @@ Cursorに導入する場合、以下のリンクをブラウザに貼り付け�
 cursor://anysphere.cursor-deeplink/mcp/install?name=microcms-document&config=eyJjb21tYW5kIjoibnB4IC15IG1pY3JvY21zLWRvY3VtZW50LW1jcC1zZXJ2ZXIifQ%3D%3D
 ```
 
-### 方法2. Claude Desktopに設定する（DXT）
+### 方法2. Claude Codeに設定する
 
-Claude Desktopに導入する場合、dxtファイルを使って簡単にインストールできます。
+Claude Codeに導入する場合、以下のコマンドを実行で設定を追加できます。
 
-1. リリースページ から最新の microcms-document-mcp-server.dxt をダウンロード
-2. Claude Desktopを起動し、設定 > エクステンション を開く
-3. ダウンロードしたdxtファイルをClaude Desktopにドラッグ＆ドロップ
+```
+claude mcp add microcms-document -- npx -y microcms-document-mcp-server
+```
 
-### 方法3. その他のMCPクライアントに設定する
+### 方法3. MCP Bundle (MCPB) を使う
+
+Claude Desktopに導入する場合、MCPBファイルを使って簡単にインストールできます。
+
+1. [リリースページ](https://github.com/microcmsio/microcms-document-mcp-server/releases) から最新の `microcms-document-mcp-server.mcpb` をダウンロード
+2. ダウンロードしたmcpbファイルをダブルクリックで開く
+
+### 方法4. その他のMCPクライアントに設定する
 
 その他のMCPクライアントに導入する場合、設定ファイルに以下を追加してください。
 
