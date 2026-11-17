@@ -14,9 +14,7 @@ X-MICROCMS-API-KEY
 ------------------
 
 GET APIリクエストの際に必要な認証キーです。  
-マネジメントAPIの権限で「メンバーの取得 (一覧・詳細)」を有効にして、リクエストヘッダーに含めて送信してください。  
-  
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/8f3b1b376ee84cc4acf12af148f9999d/CleanShot%202026-04-01%20at%2011.40.27.png)
+マネジメントAPIの権限で「メンバーの取得 (一覧・詳細)」を有効にして、リクエストヘッダーに含めて送信してください。
 
 X-MICROCMS-API-KEYが判別できると、第三者による不正なコンテンツの操作が可能となります。お取り扱いには十分ご注意ください。詳細は「[APIキー（APIの認証と権限管理）](https://document.microcms.io/content-api/x-microcms-api-key)」をご覧ください。
 
@@ -30,7 +28,7 @@ member\_id
 IDは管理画面のメンバー詳細画面や、各種マネジメントAPIのレスポンスの中で、確認可能です。
 
 レスポンスボディ
-=======
+========
 
 正常に取得できた場合の、メンバー詳細のレスポンス例です。
 
@@ -38,7 +36,9 @@ IDは管理画面のメンバー詳細画面や、各種マネジメントAPIの
       "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
       "name": "test-member",
       "email": "test@microcms.co.jp",
-      "mfa": true
+      "roleIds": ["xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"],
+      "mfa": true,
+      "lastAccessedAt": "2026-01-01T00:00:00.000Z"
     }
 
 レスポンスには以下のデータが含まれます。
@@ -59,6 +59,19 @@ IDは管理画面のメンバー詳細画面や、各種マネジメントAPIの
 
 メンバーのメールアドレスです。
 
+`roleIds`
+
+メンバーに付与されているロールIDの配列です。各IDは、[ロール一覧取得API](/management-api/get-roles)のレスポンスに含まれる各ロールの `id` に対応します。
+
 `mfa`
 
 二要素認証の設定の有無です。（`true`：有効、`false`：無効）
+
+`lastAccessedAt`
+
+サービス管理画面への最終アクセス日時です。（ISO 8601形式のUTC（協定世界時））  
+  
+以下の場合は null が返却されます。
+
+・サービスのプランがEnterprise以外の場合  
+・一度もアクセスがない場合
