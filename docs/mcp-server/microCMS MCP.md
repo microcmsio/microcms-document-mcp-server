@@ -98,6 +98,10 @@ API
 
 [API情報詳細の取得](https://document.microcms.io/management-api/get-api-info)
 
+**microcms\_create\_api**
+
+[APIの作成](https://document.microcms.io/management-api/post-apis)
+
 **microcms\_get\_member**
 
 [メンバー詳細情報の取得](https://document.microcms.io/management-api/get-member)
@@ -105,6 +109,30 @@ API
 **microcms\_get\_members**
 
 [メンバー一覧情報の取得](https://document.microcms.io/management-api/get-members)
+
+**microcms\_update\_member\_roles**
+
+[メンバーの詳細情報を変更](https://document.microcms.io/management-api/patch-member)
+
+**microcms\_get\_roles**
+
+[ロール情報一覧の取得](https://document.microcms.io/management-api/get-roles)
+
+**microcms\_get\_role**
+
+[ロール情報詳細の取得](https://document.microcms.io/management-api/get-role)
+
+**microcms\_create\_role**
+
+[ロールの作成](https://document.microcms.io/management-api/post-roles)
+
+**microcms\_update\_role**
+
+[ロールの更新](https://document.microcms.io/management-api/patch-roles)
+
+**microcms\_delete\_role**
+
+[ロールの削除](https://document.microcms.io/management-api/delete-roles)
 
 設定
 ==
@@ -125,7 +153,52 @@ MCPクライアント側の設定
 
 ここでは、いくつかのクライアントでの設定例を紹介します。
 
-### ChatGPTアプリ
+MCPクライアントの設定方法、画面構成、メニュー名は変更される場合があります。本ページの手順と異なる場合は、各クライアントの公式ドキュメントもあわせてご確認ください。
+
+### ChatGPT（Web）
+
+1.  ChatGPTのWeb版にて設定を開きます。
+2.  \[セキュリティとログイン\]を開き、\[開発者モード\]をONにします。
+3.  ホームに戻り、左サイドバーから\[プラグイン\]を選択します。
+4.  画面右上にある\[＋\]ボタンをクリックします。
+5.  以下を入力して\[作成する\]ボタンをクリックし、接続します。`${MICROCMS_SERVICE_ID}`と`${MICROCMS_API_KEY}`は、ご自身のサービスIDとAPIキーに置換してください。（アクセストークンについては作成後の画面での入力となります）
+
+項目
+
+設定値
+
+アイコン
+
+任意
+
+名前
+
+任意
+
+接続（サーバーのURL）
+
+`https://mcp.microcms.io/mcp/${MICROCMS_SERVICE_ID}`
+
+認証
+
+アクセストークンまたはAPIキー
+
+ヘッダー スキーム
+
+カスタム ヘッダー
+
+ヘッダー名
+
+`Authorization`
+
+アクセストークンまたはAPIキー
+
+`Bearer ${MICROCMS_API_KEY}`
+
+ChatGPTでカスタムMCPを利用するには、Plus / Pro / Business / Enterprise / Eduなどの有料プランが必要です。  
+また、開発者モードを有効にするためには管理者 / 所有者である必要があります。
+
+### ChatGPT（アプリ）
 
 1.  ChatGPTアプリで設定を開きます。
 2.  プラグインを開き、MCPタブを選択します。
@@ -139,7 +212,7 @@ MCPクライアント側の設定
 
 名前
 
-`microCMS`
+任意
 
 URL
 
@@ -160,6 +233,43 @@ URL
     [mcp_servers.microcms]
     url = "https://mcp.microcms.io/mcp/${MICROCMS_SERVICE_ID}"
     http_headers = { Authorization = "Bearer ${MICROCMS_API_KEY}" }
+    
+    
+
+### Claude Desktop / Claude.ai
+
+1.  設定を開いて、\[コネクタ\]を選択します。
+2.  \[追加\]から\[カスタムコネクタを追加\]を選択します。
+3.  以下を入力して保存します。`${MICROCMS_SERVICE_ID}`と`${MICROCMS_API_KEY}`は、ご自身のサービスIDとAPIキーに置換してください。
+
+項目
+
+設定値
+
+名前
+
+任意
+
+リモートMCPサーバーURL
+
+`https://mcp.microcms.io/mcp/${MICROCMS_SERVICE_ID}`
+
+認証
+
+なし
+
+※ APIキーによる認証の場合は"なし"を選択し、リクエストヘッダーにAPIキーを追加します。
+
+リクエストヘッダー
+
+`authorization`
+
+リクエストヘッダーの値
+
+`Bearer ${MICROCMS_API_KEY}`
+
+\- ClaudeのFreeプランでは、リクエストヘッダーの設定ができず、連携できない場合があります。  
+\- ClaudeのTeamプランまたはEnterpriseプランでは、カスタムMCPを追加するために、プライマリーオーナー/オーナーの権限が必要です。
 
 ### Claude Code
 
@@ -201,7 +311,7 @@ MCPサーバーURL
 
 名前
 
-`microCMS`
+`任意`
 
 認証
 
