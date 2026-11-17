@@ -10,14 +10,7 @@ APIキーは**管理者権限を持つユーザーのみ、作成／編集／削
   
 旧APIキー形式からの移行については[旧API（X-API-KEYなど）からの移行](/content-api/from-oldapikey-to-x-microcms-apikey)をご覧ください。
 
-APIキーはプランごとに作成できる個数が異なります
-
-*   Hobbyプラン：1個
-*   Teamプラン：3個
-*   Businessプラン：10個
-*   Enterpriseプラン：20個
-
-プランごとに利用できる機能については、[料金プランページ](https://microcms.io/pricing)をご覧ください。
+APIキーはプランごとに作成できる個数が異なります。プランごとに作成できるAPIキー数の違いについては、[料金プランページ](https://microcms.io/pricing)をご覧ください。
 
 APIキーの権限設定によっては、外部からの書き込み（WRITE系APIのリクエスト）が可能になったり、下書き状態のコンテンツが公開状態になってしまう可能性がございます。お取り扱いにはご注意ください。
 
@@ -113,18 +106,20 @@ API単位で個別に権限を設定できます。
 ベータ版として提供しているマネジメントAPIについては、利用したい操作項目にチェックを入れることで当該操作が可能となります。  
 APIキー作成モーダルの「マネジメントAPI（ベータ）」のタブを開き、設定してください。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/ea4d3380ae464ee8ba937b3976365989/CleanShot%202024-06-05%20at%2014.19.55%402x.png)  
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/7252791c14f142b3ac6c4489ce890556/CleanShot%202026-09-03%20at%2009.58.08.png)  
   
 それぞれの項目の詳細については、下記のリンクからご確認ください。
 
 *   [コンテンツの取得 (一覧・詳細)](/management-api/get-list-contents-management)
 *   [コンテンツの作成者を変更](/management-api/patch-contents-created-by)
 *   [コンテンツの公開状態を変更](/management-api/patch-contents-status)
+*   [コンテンツのスケジュール設定を変更](/management-api/put-contents-reservation)
 *   [メディアの取得](/management-api/get-media-v2)
 *   [メディアのアップロード](/management-api/post-media)
 *   [メディアの削除](/management-api/delete-media-v2)
 *   [メンバーの取得 (一覧・詳細)](/management-api/get-member)
 *   [API情報の取得（一覧・詳細）](/management-api/get-api-info)
+*   [APIの作成](/management-api/post-apis)
 *   [サービス情報の取得](/management-api/get-service)
 
 APIキーによる権限設定のユースケース
