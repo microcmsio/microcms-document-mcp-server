@@ -110,3 +110,8 @@ token
 **tokenの有効期限は15秒です**（ただし、15秒を超えた後も一定期間、トークンは有効な場合があります）。
 
 tokenを利用したメディア情報の取得方法については、ヘルプ「[【マネジメントAPI】GET /api/v2/mediaのtokenを用いたリクエスト方法](https://help.microcms.io/ja/knowledge/management-api-get-media-token)」をご覧ください。
+
+エラーレスポンス
+========
+
+「[マネジメントAPIのエラーレスポンス](/management-api/management-api-error-response)」を参照ください。
