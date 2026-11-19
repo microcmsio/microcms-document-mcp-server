@@ -197,3 +197,8 @@ offset
 カスタムステータスについて詳しくは以下ドキュメントをご覧ください。
 
 https://document.microcms.io/manual/custom-status
+
+エラーレスポンス
+========
+
+「[マネジメントAPIのエラーレスポンス](/management-api/management-api-error-response)」を参照ください。
