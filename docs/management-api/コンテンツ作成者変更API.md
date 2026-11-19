@@ -53,3 +53,8 @@ microCMSではJSON形式のデータのみ扱っているため、`application/j
 正常に作成者を変更できた場合は、以下のようなレスポンスが返却されます。
 
     {"id":"some_content_id"}
+
+エラーレスポンス
+========
+
+「[マネジメントAPIのエラーレスポンス](/management-api/management-api-error-response)」を参照ください。
