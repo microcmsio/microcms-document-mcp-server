@@ -61,3 +61,8 @@ url
 ### id
 
 削除されたメディアの内部的なIDです。
+
+エラーレスポンス
+========
+
+「[マネジメントAPIのエラーレスポンス](/management-api/management-api-error-response)」を参照ください。
