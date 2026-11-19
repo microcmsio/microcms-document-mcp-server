@@ -59,3 +59,8 @@ microCMSではJSON形式のデータのみ扱っているため、`application/j
 =====
 
 正常にコンテンツを作成できた場合は`200`レスポンスが返却されます。
+
+エラーレスポンス
+========
+
+「[マネジメントAPIのエラーレスポンス](/management-api/management-api-error-response)」を参照ください。
