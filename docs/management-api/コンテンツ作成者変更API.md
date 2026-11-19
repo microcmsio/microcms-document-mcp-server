@@ -30,7 +30,7 @@ microCMSではJSON形式のデータのみ扱っているため、`application/j
 ========
 
 `createdBy`にメンバーIDを指定してください。  
-メンバーIDは、管理画面の[メンバー詳細画面](/manual/manage-members#h0583e0c8b1)より確認可能です。
+メンバーIDは、管理画面の[メンバー詳細画面](/manual/manage-members#h0583e0c8b1)または[メンバー一覧取得API](https://document.microcms.io/management-api/get-members)より確認可能です。
 
     {"createdBy": "[メンバーID]"}
 
@@ -53,3 +53,8 @@ microCMSではJSON形式のデータのみ扱っているため、`application/j
 正常に作成者を変更できた場合は、以下のようなレスポンスが返却されます。
 
     {"id":"some_content_id"}
+
+エラーレスポンス
+========
+
+「[マネジメントAPIのエラーレスポンス](/management-api/management-api-error-response)」を参照ください。
