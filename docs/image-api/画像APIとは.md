@@ -13,7 +13,8 @@ microCMSには、画像の編集を行うことができる、画像APIという
 こちらのドキュメントに記載しているパラメータ以外にも、利用可能なパラメータがございます。  
 APIに関して詳しく知りたい方は、imgixの[公式リファレンス](https://docs.imgix.com/apis/url)をご覧ください。
 
-`?auto=format`については対応しておりません。あらかじめご了承ください。
+*   `?auto=format`については対応しておりません。あらかじめご了承ください。
+*   [Amazon S3連携](https://document.microcms.io/manual/amazon-s3-integration)を有効にしている場合、画像APIは利用できません。
 
 利用可能な主な画像方式
 ===========
@@ -22,12 +23,13 @@ APIに関して詳しく知りたい方は、imgixの[公式リファレンス](
 *   PNG
 *   GIF
 *   WebP
+*   HEIC/HEIF
 
 その他の利用可能な形式については、以下の`Supported as input format`をご参照ください。
 
 https://docs.imgix.com/best-practices/guide-to-image-types#which-image-formats-can-be-served-with-imgix
 
-*   SVG形式については、画像APIをご利用いただけません。
+SVG形式については、画像APIをご利用いただけません。
 
 画像APIの適用方法
 ==========
@@ -41,7 +43,7 @@ https://docs.imgix.com/best-practices/guide-to-image-types#which-image-formats-c
 
     // 画像フィールド
     "image": {
-            "url": "https://images.microcms-assets.io/assets/xxxx/yyyy/image.png.",
+            "url": "https://images.microcms-assets.io/assets/xxxx/yyyy/image.png",
             "height": 630,
             "width": 1200
     }
@@ -106,7 +108,7 @@ https://docs.imgix.com/best-practices/guide-to-image-types#which-image-formats-c
 リッチエディタに登録したデータのレスポンスはHTML形式となるため、画像APIを適用するためには、画像URL部分を抜き出す必要があります。  
 適用方法は、ヘルプ記事の「[リッチエディタ内の画像に対して、画像APIを適用したい](https://help.microcms.io/ja/knowledge/apply-image-api-in-rich-editor)」をご確認ください。
 
-wパラメータとhパラメータに限り、リッチエディタの中で画像ごとに指定することができます。設定方法は、「[リッチエディタの操作方法](/manual/rich-editor-usage#h7b3c950f25)」をご確認ください。
+wパラメータとhパラメータに限り、リッチエディタの中で画像ごとに指定することができます。設定方法は、「[リッチエディタの操作方法](https://document.microcms.io/manual/rich-editor-usage#h7b3c950f25)」をご確認ください。
 
 主なパラメータ
 -------
@@ -124,3 +126,11 @@ https://document.microcms.io/image-api/format
 https://document.microcms.io/image-api/text
 
 https://document.microcms.io/image-api/border
+
+https://document.microcms.io/image-api/padding
+
+https://document.microcms.io/image-api/mask
+
+https://document.microcms.io/image-api/download
+
+https://document.microcms.io/image-api/watermark
