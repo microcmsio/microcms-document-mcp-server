@@ -70,3 +70,8 @@ curlを利用する場合のリクエスト例です。
     
     //ファイル
     {"url":"https://files.microcms-assets.io/assets/xxx/yyy/sample.txt"}
+
+エラーレスポンス
+========
+
+「[マネジメントAPIのエラーレスポンス](/management-api/management-api-error-response)」を参照ください。
