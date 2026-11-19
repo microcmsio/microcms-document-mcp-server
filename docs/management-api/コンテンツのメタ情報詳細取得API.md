@@ -160,3 +160,8 @@ X-MICROCMS-API-KEYが判別できると、第三者による不正なコンテ�
 カスタムステータスについて詳しくは、以下ドキュメントをご覧ください。
 
 https://document.microcms.io/manual/custom-status
+
+エラーレスポンス
+========
+
+「[マネジメントAPIのエラーレスポンス](/management-api/management-api-error-response)」を参照ください。
