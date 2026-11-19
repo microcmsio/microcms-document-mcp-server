@@ -81,3 +81,8 @@ imageOnly
 動画やPDFなどのファイルは除き、画像のみを取得したい場合に指定するパラメータです。  
 画像のみを取得する場合は`true`を指定してください。  
 デフォルト値は`false`です。
+
+エラーレスポンス
+========
+
+「[マネジメントAPIのエラーレスポンス](/management-api/management-api-error-response)」を参照ください。
