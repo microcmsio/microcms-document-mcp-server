@@ -16,7 +16,7 @@ X-MICROCMS-API-KEY
 GET APIリクエストの際に必要な認証キーです。  
 マネジメントAPIの権限で「メディアの取得」を有効にして、リクエストヘッダーに含めて送信してください。  
   
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/386bb17e6d9e4a9ab10142d708a9afaa/CleanShot%202024-03-22%20at%2014.42.03%402x.png)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/ba19ca64a3f44a98beea9aa13e73b433/CleanShot%202025-08-21%20at%2011.45.29.png)
 
 X-MICROCMS-API-KEYが判別できると、第三者による不正なコンテンツの操作が可能となります。お取り扱いには十分ご注意ください。詳細は「[APIキー（APIの認証と権限管理）](https://document.microcms.io/content-api/x-microcms-api-key)」をご覧ください。
 
@@ -29,15 +29,25 @@ X-MICROCMS-API-KEYが判別できると、第三者による不正なコンテ�
       "media": [
         {
           "id": "e803c1fa-368d-4087-b937-646db9f6e328",
-          "url": "https://images.microcms-assets.io/assets/9895824867684c2994e22452171b8c11/sample1.png",
+          "createdAt": "2025-02-28T05:34:48.722Z",
+          "updatedAt": "2026-04-08T01:32:39.694Z",
+          "url": "https://images.microcms-assets.io/assets/9895824867684c2994e22452171b8c11/8f3b1b376ee84cc4acf12af148f9999d/sample1.png",
           "width": 1200,
-          "height": 800
+          "height": 800,
+          "tags": [
+            "drawings",
+            "animals"
+          ]
         },
         {
           "id": "52d27e9a-5ada-4c22-9fe9-df2dec7ca1fd",
+          "createdAt": "2026-04-08T01:32:10.812Z",
+          "updatedAt": "2026-04-08T01:32:22.642Z",
           "url": "https://images.microcms-assets.io/assets/9895824867684c2994e22452171b8c11/d7bcc402720f471f9f36de5eca4057c5/sample2.png",
           "width": 1200,
-          "height": 800
+          "height": 800,
+          "alt": "walking with dog in the park",
+          "tags": []
         }
       ],
       "totalCount": 2,
@@ -71,7 +81,20 @@ imageOnly
 fileName
 --------
 
-ファイル名による絞り込みを行うためのパラメータです。拡張子を含むファイル名が、指定した文字列に部分一致するメディアのみ取得されます。  
+ファイル名による絞り込みを行うためのパラメータです。指定した文字列で拡張子を含むファイル名を検索し、ヒットしたメディアが取得されます。  
+デフォルトでは絞り込みは行われません。
+
+tags
+----
+
+タグによる絞り込みを行うためのパラメータです。  
+`tags=drawings,animals` のようにカンマ区切りで複数指定した場合は、指定したすべてのタグが付与されたメディアが取得されます。  
+デフォルトでは絞り込みは行われません。
+
+alt
+---
+
+代替テキストによる絞り込みを行うためのパラメータです。指定した文字列でメディアの代替テキストを検索し、ヒットしたメディアが取得されます。  
 デフォルトでは絞り込みは行われません。
 
 token
@@ -87,3 +110,8 @@ token
 **tokenの有効期限は15秒です**（ただし、15秒を超えた後も一定期間、トークンは有効な場合があります）。
 
 tokenを利用したメディア情報の取得方法については、ヘルプ「[【マネジメントAPI】GET /api/v2/mediaのtokenを用いたリクエスト方法](https://help.microcms.io/ja/knowledge/management-api-get-media-token)」をご覧ください。
+
+エラーレスポンス
+========
+
+「[マネジメントAPIのエラーレスポンス](/management-api/management-api-error-response)」を参照ください。
