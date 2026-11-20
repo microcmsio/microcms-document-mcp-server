@@ -49,7 +49,7 @@ SDKを利用している場合は、最新版へのアップデートを行な�
 *   X-GLOBAL-DRAFT-KEY → **GET、下書きの全取得のみON**
 
 *   X-GLOBAL-DRAFT-KEYのGET権限については、2023年2月20日に追加で付与されました。
-*   [HTTPメソッドの設定](https://blog.microcms.io/http_post_api/ )を行なっていた場合は、[個別権限](/content-api/x-microcms-api-key#hbbcd75efe4)として移行されています。
+*   [HTTPメソッドの設定](https://blog.microcms.io/http_post_api/)を行なっていた場合は、[個別権限](https://document.microcms.io/content-api/x-microcms-api-key#hbbcd75efe4)として移行されています。
 
 ### 移行期限について
 
