@@ -29,8 +29,9 @@ X-MICROCMS-API-KEYへの移行について
     $ curl -X POST "https://<subdomain>.microcms.io/api/v1/<endpoint>" \
         -H "X-WRITE-API-KEY: <旧APIキー>"
 
-仕様変更後、APIキーは **X-MICROCMS-API-KEY** ヘッダに統一されました。管理画面からAPIキーの設定を行うことによって、下書き取得や書き込みに関する権限管理が行えますので、リクエストヘッダの記載を統一することができます。  
-[https://document.microcms.io/content-api/x-microcms-api-key](https://document.microcms.io/content-api/x-microcms-api-key)  
+仕様変更後、APIキーは **X-MICROCMS-API-KEY** ヘッダに統一されました。管理画面からAPIキーの設定を行うことによって、下書き取得や書き込みに関する権限管理が行えますので、リクエストヘッダの記載を統一することができます。
+
+[APIキー（APIの認証と権限管理）](https://document.microcms.io/content-api/x-microcms-api-key)  
   
 移行後のAPIキーの指定方法は、以下のようになります。
 
@@ -49,7 +50,7 @@ SDKを利用している場合は、最新版へのアップデートを行な�
 *   X-GLOBAL-DRAFT-KEY → **GET、下書きの全取得のみON**
 
 *   X-GLOBAL-DRAFT-KEYのGET権限については、2023年2月20日に追加で付与されました。
-*   [HTTPメソッドの設定](https://blog.microcms.io/http_post_api/ )を行なっていた場合は、[個別権限](/content-api/x-microcms-api-key#hbbcd75efe4)として移行されています。
+*   [HTTPメソッドの設定](https://blog.microcms.io/http_post_api/)を行なっていた場合は、[個別権限](https://document.microcms.io/content-api/x-microcms-api-key#hbbcd75efe4)として移行されています。
 
 ### 移行期限について
 
