@@ -29,8 +29,9 @@ X-MICROCMS-API-KEYへの移行について
     $ curl -X POST "https://<subdomain>.microcms.io/api/v1/<endpoint>" \
         -H "X-WRITE-API-KEY: <旧APIキー>"
 
-仕様変更後、APIキーは **X-MICROCMS-API-KEY** ヘッダに統一されました。管理画面からAPIキーの設定を行うことによって、下書き取得や書き込みに関する権限管理が行えますので、リクエストヘッダの記載を統一することができます。  
-[https://document.microcms.io/content-api/x-microcms-api-key](https://document.microcms.io/content-api/x-microcms-api-key)  
+仕様変更後、APIキーは **X-MICROCMS-API-KEY** ヘッダに統一されました。管理画面からAPIキーの設定を行うことによって、下書き取得や書き込みに関する権限管理が行えますので、リクエストヘッダの記載を統一することができます。
+
+[APIキー（APIの認証と権限管理）](https://document.microcms.io/content-api/x-microcms-api-key)  
   
 移行後のAPIキーの指定方法は、以下のようになります。
 
