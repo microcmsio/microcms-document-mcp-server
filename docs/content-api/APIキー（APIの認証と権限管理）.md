@@ -10,8 +10,7 @@ APIキーは**管理者権限を持つユーザーのみ、作成／編集／削
   
 旧APIキー形式からの移行については[旧API（X-API-KEYなど）からの移行](/content-api/from-oldapikey-to-x-microcms-apikey)をご覧ください。
 
-APIキーはプランごとに作成できる個数が異なります（Hobbyプランで1個、Teamプランで3個、Businessプランで10個）。  
-プランごとに利用できる機能については、[料金プランページ](https://microcms.io/pricing)をご覧ください。
+APIキーはプランごとに作成できる個数が異なります。プランごとに作成できるAPIキー数の違いについては、[料金プランページ](https://microcms.io/pricing)をご覧ください。
 
 APIキーの権限設定によっては、外部からの書き込み（WRITE系APIのリクエスト）が可能になったり、下書き状態のコンテンツが公開状態になってしまう可能性がございます。お取り扱いにはご注意ください。
 
@@ -28,17 +27,16 @@ APIキーとは、APIを使用する際に認証やアクセス制御を行う�
 APIキーの作成方法
 ==========
 
-まず、サイドバーの「○個のAPIキー」をクリックしてAPIキー一覧画面に遷移します。  
-  
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/ad3e328422314e029ab212ed2561bd5d/CleanShot%202024-02-06%20at%2017.01.51%402x.png)  
-  
-APIキー管理一覧の「追加」ボタンをクリックすると、APIキー作成モーダル画面が表示され、APIキーを作成できます。  
-  
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/de06d5fb25f0445db20cc1093fe46d9a/CleanShot%202024-02-06%20at%2017.02.41%402x.png)  
-  
-APIキー名の設定と、APIキーに付与する権限について詳細設定を行います。  
-  
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/5365948939244a89842f176172e2e38d/CleanShot%202024-06-10%20at%2011%E2%80%AF.32.34.png)  
+まず、サイドバーの「○個のAPIキー」をクリックしてAPIキー一覧画面に遷移します。
+
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/ad3e328422314e029ab212ed2561bd5d/CleanShot%202024-02-06%20at%2017.01.51%402x.png)
+
+APIキー管理一覧の「追加」ボタンをクリックすると、APIキー作成モーダル画面が表示され、APIキーを作成できます。
+
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/de06d5fb25f0445db20cc1093fe46d9a/CleanShot%202024-02-06%20at%2017.02.41%402x.png)
+
+APIキー名の設定と、APIキーに付与する権限について詳細設定を行います。
+
   
 APIキーの設定には大きく以下の2つの項目があります。モーダル画面内でタブ切り替えができますので、それぞれ用途に応じて必要な設定をしてください。
 
@@ -57,8 +55,8 @@ APIキーの設定には大きく以下の2つの項目があります。モー�
 
 ### 1\. デフォルト権限
 
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/b3e2c6c420cd4566adf55249b397c59c/CleanShot%202024-06-10%20at%2011%E2%80%AF.32.34.png)  
-  
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/b3e2c6c420cd4566adf55249b397c59c/CleanShot%202024-06-10%20at%2011%E2%80%AF.32.34.png)
+
 サービス全てのAPIのデフォルト権限を設定できます。  
 デフォルト権限は**サービス全体の全てのAPIに適用されます**。  
   
@@ -88,8 +86,8 @@ APIキーの設定には大きく以下の2つの項目があります。モー�
 
 ### 2\. 個別権限
 
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/78461edb8e9a490aa6889419fdb4fb1c/CleanShot%202024-06-10%20at%2011%E2%80%AF.35.59.png)  
-  
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/78461edb8e9a490aa6889419fdb4fb1c/CleanShot%202024-06-10%20at%2011%E2%80%AF.35.59.png)
+
 API単位で個別に権限を設定できます。  
 指定したAPIに関しては**デフォルト権限に対して上書きされます**。  
   
@@ -97,26 +95,21 @@ API単位で個別に権限を設定できます。
 
 設定できる項目は、デフォルト権限と同じです。  
   
-「+ 個別権限を追加」をクリックすることで、複数のAPIに対して個別権限を追加できます。  
-  
+「+ 個別権限を追加」をクリックすることで、複数のAPIに対して個別権限を追加できます。
+
 ![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/f1aa235342014215b8c4c94fe91c2b4f/CleanShot%202024-06-10%20at%2011%E2%80%AF.37.34.png)
 
 マネジメントAPI（ベータ）の設定
 -----------------
 
 ベータ版として提供しているマネジメントAPIについては、利用したい操作項目にチェックを入れることで当該操作が可能となります。  
-APIキー作成モーダルの「マネジメントAPI（ベータ）」のタブを開き、設定してください。  
-  
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/ea4d3380ae464ee8ba937b3976365989/CleanShot%202024-06-05%20at%2014.19.55%402x.png)  
-  
-それぞれの項目の詳細については、下記のリンクからご確認ください。
+APIキー作成モーダルの「マネジメントAPI（ベータ）」のタブを開き、設定してください。
 
-*   [コンテンツの取得 (一覧・詳細)](/management-api/get-list-contents-management)
-*   [コンテンツの作成者を変更](https://document.microcms.io/management-api/patch-contents-created-by)
-*   [コンテンツの公開状態を変更](/management-api/patch-contents-status)
-*   [メディアの取得](/management-api/get-media-v2)
-*   [メディアのアップロード](/management-api/post-media)
-*   [メディアの削除](https://document.microcms.io/management-api/delete-media-v2)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/7252791c14f142b3ac6c4489ce890556/CleanShot%202026-09-03%20at%2009.58.08.png)
+
+マネジメントAPIの各エンドポイントの詳細については、下記のページからご確認ください。
+
+https://document.microcms.io/management-api/introduction
 
 APIキーによる権限設定のユースケース
 ===================
@@ -132,11 +125,13 @@ X-MICROCMS-API-KEYの権限管理を活用いただくことで、要件に応�
 
 *   デフォルト権限ではGETのみを許可する。
 
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/29d0da75949443f7aa94cdd2160799f3/x-microcms-api-key-8.png)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/f4efe4511c9d4e6a9eeebc52d6d03683/CleanShot%202025-08-21%20at%2014.31.26.png)
 
 *   お問い合わせなどの更新がされるコンテンツAPIのみPOSTなどの書き込み系の個別権限を設定する。このAPIキーはサーバーサイドで処理するなど取り扱いには注意をする。
 
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/bdb4d218097d408b8e60789a0800a93e/x-microcms-api-key-9.png)  
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/14e90382c27b405189a0eb58d1a2480d/CleanShot%202025-08-21%20at%2014.32.23.png)
+
+  
 
 ２. 公開・非公開コンテンツで使い分ける
 --------------------
@@ -146,15 +141,15 @@ X-MICROCMS-API-KEYの権限管理を活用いただくことで、要件に応�
 
 *   デフォルト権限は全て false
 
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/1ad4a7e596674121878497ad9382e539/x-microcms-api-key-5.png)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/191281a6ff124b28b9aae1c3ad9d7297/CleanShot%202025-08-21%20at%2014.36.59.png)
 
 *   公開する API は個別権限で GET のみ true
 
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/a070f41f210f40b499497216f8acb1fd/x-microcms-api-key-6.png)
+![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/e91d716b1f5b4fda9fac3c2716754d77/CleanShot%202025-08-21%20at%2014.37.47.png)
 
-*   プライベートな API は個別権限なし
+*   プライベートな API は個別権限を設定しない
 
-![](https://images.microcms-assets.io/assets/d6af1616730544a596d299c20834f460/3aad4e9618fb4275887edce2c8f5d1fd/x-microcms-api-key-7.png)  
+  
 という設定でキーを作ると、そのキーを直接クライアントに埋め込むことができるので API キーを隠すための中間サーバを作る手間を省くことができます。  
 
 ３. マルチデバイスごとの設定
